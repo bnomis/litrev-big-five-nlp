@@ -465,6 +465,16 @@ config: dict[str, typing.Any] = {
         # Unset, the section renders a placeholder rather than guessing
         # a field.
         'results_group_field': 'datasets',
+        # Fold the singleton tail of the results section. A group holding one
+        # study compares nothing, and keyed on the separator above this
+        # review has a long tail of corpora used once. The gathered studies
+        # keep their result text - they are relisted under one heading, not
+        # summarised away.
+        #
+        # Separate from `frequency_min_count` on purpose: that one governs
+        # every list[str] field's frequency table, this one only the field
+        # `results_group_field` names.
+        'results_min_group_size': 2,
         # `synthesis` joins the default supplementary set. It is the
         # per-field transpose - one table per field, one row per study -
         # which was the only synthesis available before `characteristics`
