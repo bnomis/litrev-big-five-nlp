@@ -407,6 +407,46 @@ config: dict[str, typing.Any] = {
             'percentage or an F1 to accuracy.'
         ),
     },
+    # Risk-of-bias appraisal. PROBAST's four domains - the established
+    # instrument for appraising prediction-model studies, which is what
+    # these papers are - with the concern for each written against this
+    # literature's own failure modes rather than PROBAST's generic
+    # wording. The names are the instrument's so a reviewer recognises
+    # them; the prose is this review's.
+    #
+    # LitRev supplies the answers (low / some_concerns / high /
+    # no_information); this file supplies only the question. Editing a
+    # concern re-appraises without re-extracting - that decoupling is why
+    # `appraise` is a stage of its own rather than extra extract fields.
+    'appraise': {
+        'domains': {
+            'Participants': (
+                'Were the people whose language was analysed an appropriate sample for the '
+                'target population, and is that population stated? Judge high where a '
+                'convenience sample - students, crowdworkers, or self-selected social media '
+                'users - is presented as a general population without qualification.'
+            ),
+            'Predictors': (
+                'Were the language features defined and computed without knowledge of the '
+                'personality scores? Judge high where feature selection, prompt design or '
+                'hyperparameters were tuned against the test labels.'
+            ),
+            'Outcome': (
+                'Were personality scores obtained with a validated instrument, and is it '
+                'named? Judge low for a full inventory such as NEO-PI-R or BFI-44, some '
+                'concerns for a brief scale such as TIPI or BFI-10, and high where labels are '
+                'inferred from a user profile, annotated by a model, or the instrument is not '
+                'reported.'
+            ),
+            'Analysis': (
+                'Does the held-out evaluation support the claim? Judge high where the split is '
+                'by document rather than by subject, so one person contributes to both '
+                'training and test; where the sample is too small for the number of '
+                'parameters; or where results are reported for some traits only, or against no '
+                'baseline.'
+            ),
+        },
+    },
     'store': {
         'path': 'output/litrev.db',
     },
