@@ -341,6 +341,15 @@ config: dict[str, typing.Any] = {
                     'not_reported',
                     'other',
                 ],
+                # litrev warns that this asks the quote for a second fact.
+                # Checked against the 2026-09-04 run and kept: 36 of the 58
+                # judged quotes name an instrument, because a sentence
+                # supporting 'self_report_questionnaire' usually says which
+                # questionnaire. Partial rather than reliable, but nothing
+                # downstream derives a judgement from the instrument - unlike
+                # the split unit, which the appraiser's Analysis domain turns
+                # on - so a partial answer costs nothing and a field of its
+                # own is unaffordable: the schema is at its 16-union ceiling.
                 'description': 'How the personality labels were obtained. Name the specific instrument in the quote where the paper gives one (BFI-44, NEO-PI-R, IPIP, TIPI, BFI-2).',
             },
             # --- Modelling ------------------------------------------------
@@ -390,11 +399,44 @@ config: dict[str, typing.Any] = {
                     'not_reported',
                     'other',
                 ],
-                'description': 'How held-out evaluation was done. Note in the quote whether the split is by subject or by document - a document-level split leaks when one person contributes several documents.',
+                'description': 'How held-out evaluation was done.',
+            },
+            # Split off validation_scheme's description, which used to ask the
+            # quote to note whether the split was by subject or by document.
+            # That never happened: a quote must support its own value, and a
+            # sentence supporting 'train_test_split' is generally not one that
+            # names what the split is by. Of the 64 quotes the 2026-09-04 run
+            # produced, none stated the unit, which left the appraiser's
+            # Analysis domain - 39 of 70 studies judged high, largely on
+            # leakage - with nothing on disk to check it against.
+            #
+            # An enum rather than a str by arithmetic, not taste: the schema
+            # ceiling below allows 2*(non-enum) + 1*(enum) <= 16, and this
+            # review sits at 2*5 + 5 = 15. An enum lands on 16 exactly; a str
+            # would land on 17 and every call would fail at compilation.
+            'validation_split_unit': {
+                'type': 'enum',
+                'choices': [
+                    'by_subject',
+                    'by_document',
+                    'mixed',
+                    'not_applicable',
+                    'not_reported',
+                ],
+                'description': (
+                    'Whether the held-out evaluation separates subjects or only documents. by_subject means no '
+                    'person appears in both training and test; by_document means the split is over texts and one '
+                    'person may appear on both sides, which leaks. not_applicable where the paper does no '
+                    'held-out evaluation at all.'
+                ),
             },
             'code_or_data_available': {
                 'type': 'enum',
                 'choices': ['code_and_data', 'code_only', 'data_only', 'none', 'not_stated'],
+                # Same warning, same decision: 20 of the 36 releasing studies'
+                # quotes carry a URL, since a sentence announcing a release
+                # often gives one. Additive, with no derived claim resting on
+                # it.
                 'description': 'What the paper states is publicly released. The quote should carry the URL or repository name if one is given.',
             },
         },
