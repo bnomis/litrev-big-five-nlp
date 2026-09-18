@@ -488,6 +488,19 @@ config: dict[str, typing.Any] = {
                 'baseline.'
             ),
         },
+        # Participants and Outcome are properties of a corpus, not of a paper:
+        # who was sampled and how their labels were obtained belong to the
+        # dataset. Judging them once per study forced the model to pick one
+        # corpus unprompted when a paper used several, and it always picked
+        # the weakest - 21 of the 36 studies judged high on Outcome in the
+        # 2026-09-16 run were multi-dataset, with Vu et al. judged on YouTube
+        # impression scores while its Essays results, scored against
+        # self-report BFI, sat in the same results table.
+        #
+        # Predictors and Analysis stay per study: feature construction and the
+        # evaluation scheme are what the authors did, not what the corpus is.
+        'unit_field': 'datasets',
+        'unit_domains': ['Participants', 'Outcome'],
     },
     'store': {
         'path': 'output/litrev.db',
