@@ -106,6 +106,38 @@ for the review that goes in the thesis. Turning it round: set
 `output/assessments/eligibility-worklist.md`, then run
 `bin/litrev.sh adjudicate`.
 
-**It has not been run yet.** Nothing below `output/` exists until you run
-the first `search`. The stage table above is what to expect, not a record
-of a pass that has happened.
+**Its later stages are stale, as of 2026-09-20.** A snowball round ran
+against the 70 papers this review had already included, and everything up
+to and including `assess` has been re-run over what it found. Nothing after
+`assess` has.
+
+What happened, in order: `snowball` followed the 70 included papers'
+references and citers and found 2,364 new candidates; `filter` took
+`filtered.json` from 303 to 855; `screen` judged the 605 new records and
+`screened.json` grew from 112 to 355; `download` retrieved 69 of those and
+`convert` turned all 69 into markdown; `assess` read the full text of the
+69 and included 48 of them. `included.json` therefore holds **118** papers -
+the original 70 plus 48 - and `eligibility.json` holds 167 assessments.
+
+So `extract`, `appraise`, `store`, `cite`, `prisma` and `report` all still
+describe the 70-paper review. **The 48 new papers have no extractions**, so
+the synthesis tables, the PRISMA counts and the reference list are each a
+record of a smaller review than the one `included.json` now names. Re-run
+them in that order before reading anything under `output/report/` as
+current.
+
+Two cautions on that re-run, both learned the hard way on 2026-09-20:
+
+- **Back up `output/assessments/` first.** `assess` rewrites
+  `eligibility.json` and `included.json` from the papers its own pass
+  covers, and a pass after a `convert` that skipped already-converted
+  papers covers only the new ones - so it silently replaced 98 assessments
+  with 69 and 70 inclusions with 48. Recovered from a backup and repaired
+  by hand; see LitRev's `TODO.md`, first item.
+- **A worklist from an earlier pass will stop the run.** `screen` and
+  `assess` both refuse a worklist whose keys are not in the current pass,
+  which any re-run over a grown record set produces. Neither worklist here
+  has ever been filled in, so archiving it and letting the stage write a
+  fresh one costs nothing - but check for answers before you move one.
+
+The pre-run and post-`assess` backups are in `output/backup-*/`.

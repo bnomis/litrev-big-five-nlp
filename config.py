@@ -208,6 +208,16 @@ config: dict[str, typing.Any] = {
             'not_english',
         ],
         'require_dual': False,
+        # Batch dispatch: the same model at half the per-token price, on
+        # Anthropic's Message Batches endpoint. Scoped to this stage rather
+        # than set globally, so `assess`, `extract` and `appraise` keep
+        # immediate dispatch and stay interactive.
+        #
+        # The trade is latency, not quality: a batch is promised within 24
+        # hours and usually returns far sooner. Screening a snowball round's
+        # candidates is not interactive work - nothing waits on it but the
+        # next stage - so the wait costs nothing and the discount is real.
+        'dispatch': 'batch',
     },
     'download': {
         # `screen` sits between `filter` and `download`, so retrieval is
@@ -263,6 +273,12 @@ config: dict[str, typing.Any] = {
             'full_text_unavailable',
         ],
         'require_dual': False,
+        # Batch dispatch, as `screen` uses and for the same reason: nothing
+        # is waiting on a full-text pass but the next stage. It matters more
+        # here than there - a full-text assessment sends the whole paper, so
+        # the measured cost is roughly 20,000 input tokens each against
+        # screening's 1,300, and half of a larger number is a larger saving.
+        'dispatch': 'batch',
     },
     'extract': {
         # One LLM call per paper answers this whole block as a single
@@ -592,5 +608,39 @@ config: dict[str, typing.Any] = {
         # Where `download` writes, so a hand-collected PDF dropped into
         # the same directory is identified and renamed by the same rules.
         'directory': 'output/downloads',
+    },
+    'snowball': {
+        # Citation searching, PRISMA's "other methods" column: follow the
+        # references and citers of the papers this review already included,
+        # to find records the database search missed.
+        #
+        # Every path is left at its default (included.json in, and
+        # snowball-candidates.json / snowball.json out, all under
+        # output.directory), because the defaults are exactly where this
+        # review's files already are. Only the parameters that are a
+        # judgement are stated here.
+        #
+        # One round. depth records the intent rather than enforcing it -
+        # the stage runs one round per invocation, because a further round
+        # is only meaningful after this one's candidates have been
+        # screened, and that is a human step in between.
+        'depth': 1,
+        # Both directions. Backward finds the foundations this field builds
+        # on, which a keyword search misses whenever the vocabulary has
+        # moved; forward finds work that cites an included paper, which is
+        # where anything published after the search date lives. Dropping
+        # forward would halve the requests, and would also drop the half
+        # that covers the gap between the search and today.
+        'directions': ['backward', 'forward'],
+        # A heavily cited paper would otherwise dominate the round: the cap
+        # is per seed per direction, so a single well-known benchmark paper
+        # cannot supply most of a round's candidates on its own.
+        'max_per_seed': 200,
+        # Off: a seed already followed is not followed again, so a repeated
+        # run costs nothing for the seeds it has already done. Turn it on
+        # for a forward search repeated months later, when papers citing a
+        # seed exist that did not before - backward references do not
+        # change, so re-following them buys nothing.
+        'refollow': False,
     },
 }
