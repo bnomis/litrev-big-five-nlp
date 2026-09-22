@@ -218,3 +218,27 @@ review sets no `search.semantic_scholar.api_key`.
 **The downstream stages have not been re-run.** `assess`, `extract`,
 `appraise` and everything after them still describe the corpus as it was
 before these 16 papers arrived, and catching them up costs LLM calls.
+
+## The quotes migration, 2026-09-22
+
+LitRev's assessor decisions changed from one supporting quote (`quote`) to a
+list of them (`quotes`). The new code refuses to read the old shape rather
+than treating it as "no quote", so the assessment artefacts were migrated
+with `bin/migrate-quotes.sh`:
+
+| File | Decisions rewritten |
+|---|---|
+| `output/assessments/screening.json` | 855 |
+| `output/assessments/eligibility.json` | 160 |
+
+Each old `quote` became a one-item `quotes` list; the 3 screening decisions
+with no quote became an empty list. Every quote was checked word for word
+against the backup, and no other field in any decision changed. No LLM call
+was made and no verdict moved.
+
+`output/appraisals/appraisals.json` and `output/extractions/extractions.json`
+also contain `quote` fields. Those belong to `appraise` and `extract`, whose
+format did not change, and they were deliberately left alone.
+
+The pre-migration files are in
+`output/backup-pre-quotes-20260922-203605/assessments/`.
