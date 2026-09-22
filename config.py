@@ -238,7 +238,28 @@ config: dict[str, typing.Any] = {
         # To enable it, set `unpaywall_email` and add 'unpaywall' back to
         # the end of the chain. That address is sent to a third party on
         # every request, which is why it is not filled in here by default.
-        'resolvers': ['direct', 'arxiv', 'doi'],
+        #
+        # `semantic_scholar` was dropped from the default chain alongside
+        # `unpaywall` with no reason recorded, which on this corpus was a
+        # mistake. Most records here were built from Semantic Scholar
+        # papers, and every such record carried that service's landing page
+        # as its URL - a page rather than a file - so `direct` was handed a
+        # question it could not answer and won nothing. This resolver asks
+        # the same API for the record's `openAccessPdf` instead, and nearly
+        # every one of those records has the DOI it needs. Restoring it on
+        # 2026-09-22 retrieved 16 papers the chain had given up on.
+        #
+        # LitRev now prefers `openAccessPdf` when it builds the record, so
+        # records created from here on carry a file URL and `direct` can
+        # win them. Keep this resolver anyway: it still covers the records
+        # already stored with a landing page, and any record whose
+        # open-access copy was not known at search time but is now.
+        #
+        # It needs no configuring - unlike `unpaywall` - and it shares one
+        # rate limiter with the searcher's semantic_scholar source, so it
+        # cannot race that stage against the same host. It is not free:
+        # that shared limiter took the stage from 5m27s to 26m.
+        'resolvers': ['direct', 'arxiv', 'semantic_scholar', 'doi'],
         # 'unpaywall_email': '<your-email>',
         'max_concurrent': 5,
     },

@@ -141,3 +141,80 @@ Two cautions on that re-run, both learned the hard way on 2026-09-20:
   fresh one costs nothing - but check for answers before you move one.
 
 The pre-run and post-`assess` backups are in `output/backup-*/`.
+
+## The identity migration, 2026-09-22
+
+The assessment artefacts held one paper twice wherever a paper's identity
+had moved between search rounds. A paper found only on arXiv was keyed
+`csl:arxiv:<id>`, because LitRev's arXiv source recorded no DOI; when the
+snowball round found the same paper through Semantic Scholar, which does
+carry arXiv's minted `10.48550/arXiv.<id>`, the key became `doi:...` and
+the earlier assessment was orphaned under the old one.
+
+What changed here, all of it reversible from
+`output/backup-pre-identity-20260922-062428/`:
+
+| | Before | After |
+|---|---|---|
+| `eligibility.json` rows | 167 | 160 |
+| `included.json` keys | 118 | 113 |
+| the same paper under two keys | 7 pairs | none |
+
+No paper was dropped and nothing was re-judged: the run made no LLM call
+at all. The seven collapsed pairs each held the same verdict on both
+copies, so the collapse is bookkeeping rather than a decision. One of them
+carried two different exclusion reasons - `not_language_input` was kept
+and `personality_not_predicted` dropped - so the exclusion breakdown a
+PRISMA diagram reports moves by one.
+
+**`output/arxiv.json` was rewritten** to carry the DOI arXiv mints for
+every submission, which the search that produced it did not record. Those
+DOIs are derived from the arXiv ids already in the file rather than
+fetched, and were checked against the DOIs Crossref and the ACL Anthology
+independently hold for the same papers. A later `search` re-run will write
+them itself, since the arXiv source now mints them; this brought the
+stored record forward so `filter` could see that the two identifiers name
+one paper.
+
+`output/identity/register.json` is new and is what remembers that mapping:
+one canonical key per paper, with every other identifier as an alias.
+`output/assessments/eligibility-worklist-pre-identity-20260922.md.bak` is
+the worklist that was archived to let `assess` run - 69 blocks, none of
+them answered.
+
+## Restoring the `semantic_scholar` resolver, 2026-09-22
+
+`download.resolvers` was `['direct', 'arxiv', 'doi']`. `semantic_scholar`
+had been dropped from LitRev's default chain alongside `unpaywall`, but
+only `unpaywall`'s absence was ever explained - and on this corpus the
+omission mattered, because most records here came from Semantic Scholar
+and carried its landing page as their URL, which `direct` cannot retrieve.
+
+Restoring it and re-running `download`:
+
+| | Before | After |
+|---|---|---|
+| `all_resolvers_failed` | 173 | 89 |
+| `failed` | 11 | 79 |
+| PDFs on disk | 167 | 183 |
+
+**16 papers were retrieved that the chain had given up on**, every one of
+them won by `semantic_scholar`, and `convert` turned all 16 into markdown
+with no OCR, no partial and no failure. The manifest kept all 355 rows and
+lost no keys.
+
+Read the middle row before celebrating the first. Of the 84 records that
+left `all_resolvers_failed`, only 14 became PDFs; 70 moved to `failed`,
+meaning a URL was found and the fetch of it was refused - mostly 403 and
+418 from publisher hosts that block automated fetching, and 27 of 74
+resolving to a `doi.org` link the `doi` resolver behind it already covers.
+Semantic Scholar's `openAccessPdf` reports where an open-access copy is
+*claimed* to be, not a file it guarantees you can fetch.
+
+The stage took 26m against 5m27s without the resolver, because it shares
+one rate limiter with the searcher's Semantic Scholar source and this
+review sets no `search.semantic_scholar.api_key`.
+
+**The downstream stages have not been re-run.** `assess`, `extract`,
+`appraise` and everything after them still describe the corpus as it was
+before these 16 papers arrived, and catching them up costs LLM calls.
