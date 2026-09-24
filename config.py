@@ -561,6 +561,23 @@ config: dict[str, typing.Any] = {
         # refreshes report.md and leaves a stale report.pdf beside it.
         # Needs `pandoc` and the `typst` engine on PATH.
         'formats': ['markdown', 'latex', 'pdf'],
+        # The characteristics table as three, grouped the way the README's
+        # "Reading the extractions" section reads the fields: what data,
+        # how it was modelled, and what was found. As one table the ten
+        # non-text fields are too wide for any page - it ran off A4
+        # portrait, and even landscape leaves about 1 cm per list column -
+        # so ungrouped LitRev would split it into parts in field order,
+        # which cuts across these three questions. Grouped, each table fits
+        # a portrait page on its own.
+        #
+        # headline_results is not here: it is free text, one paragraph per
+        # study, and belongs to the results section and the per-study
+        # cards rather than to a column.
+        'characteristics_groups': {
+            'Datasets': ['datasets', 'modality', 'ground_truth_method'],
+            'Modelling': ['task_formulation', 'features_or_representation', 'model_architecture'],
+            'Results': ['evaluation_metrics', 'validation_scheme', 'validation_split_unit', 'code_or_data_available'],
+        },
         # `title` is deliberately unset: it falls back to prisma.title,
         # which is the name this review already goes by. Setting it here
         # would be a second copy of that string, free to drift from it.
