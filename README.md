@@ -67,6 +67,49 @@ A paper that was collected by hand rather than downloaded goes in
 `output/downloads/` and is picked up by `bin/litrev.sh scan`, which
 identifies it and renames it to the title-slug convention.
 
+## What a pass costs and how long it takes
+
+Measured 2026-09-24, on Anthropic `claude-sonnet-5` at that day's published
+rates: $2/MTok input and $10/MTok output immediately, half that under batch
+dispatch. The LLM figures come from the per-record token counts each stage
+writes. Sources:
+
+- `screen` and `assess`: the from-scratch re-run in `../big-five-nlp-rerun`,
+  both rounds, the snowball round included.
+- `extract` and `appraise`: the full refresh of this review on 2026-09-24.
+  All 116 papers were sent again, because the prompt order had changed.
+
+| Stage | Records | Dispatch | Cost | Time |
+|-------|---------|----------|------|------|
+| Search | 4 sources | - | free | under a minute |
+| Filter | | - | free | seconds |
+| Screen | 854 abstracts over both rounds | batch | $2.49 | a batch of 550 came back in about 4 minutes; the API allows up to 24 hours |
+| Download | 111, then 345 after the snowball round | - | free | 5 and 19 minutes; resolver failures are slow ones |
+| Convert | 94, then 70 | - | free | about 6 seconds a paper on this machine (10 and 8 minutes) |
+| Assess | 162 full texts | batch | $3.96 | a batch: minutes to hours, up to 24 hours |
+| Snowball | 113 seeds | - | free | a few minutes of Semantic Scholar lookups |
+| Extract | 116 papers | immediate | $10.17 | 21 minutes |
+| Appraise | 116 papers, `combined` | immediate | $9.02 | 21 minutes |
+| Store, cite, PRISMA | | - | free | seconds each |
+| Report | markdown and both PDFs | - | free | about a minute |
+| **Whole pass** | | | **about $26** | **about 2 hours**, plus batch waits |
+
+`extract` and `appraise` carry forward any record whose prompt, provider and
+model are unchanged, so a re-run that changes none of those costs nothing.
+Editing an extraction field or an appraisal domain re-pays that stage for
+every paper. `screen` and `assess` run under batch dispatch (set in
+`config.py`) at half price. `extract` and `appraise` run immediately, and
+they are most of what a re-run pays for.
+
+Two figures from before these measurements, as a warning against sizing by
+eye:
+
+- The re-run spent $36.26, because `appraise` then sent one call per study
+  plus one per dataset, $19.77 of it. The `combined` shape has been the
+  default since 2026-09-24.
+- Estimating from characters divided by four has undercounted every stage
+  so far. Size a new run from these per-record figures instead.
+
 ## Reading the extractions
 
 The extraction fields are grouped to build three tables:
