@@ -159,8 +159,14 @@ config: dict[str, typing.Any] = {
             'AND (prediction OR detection OR recognition OR classification OR inference OR profiling)'
         ),
         # acl_anthology is first because that is where this literature is.
-        'sources': ['acl_anthology', 'arxiv', 'crossref', 'pubmed'],
-        # 'sources': ['acl_anthology', 'arxiv', 'crossref', 'pubmed', 'semantic_scholar', 'ieee'],
+        # ieee added 2026-09-26: bin/source-probe.sh answered this query
+        # at once, and IEEE Intelligent Systems holds core papers no other
+        # source here returned (Majumder et al. 2017). semantic_scholar
+        # stays out: LitRev's adapter sends this boolean query to an
+        # endpoint with no query syntax, and it timed out on every probe -
+        # see LitRev TODO.md, "`semantic_scholar` sends a boolean query to
+        # an endpoint with no query syntax".
+        'sources': ['acl_anthology', 'arxiv', 'crossref', 'pubmed', 'ieee'],
         'max_results': 200,
         'date_from': '1999-01-01',
     },
