@@ -314,6 +314,9 @@ config: dict[str, typing.Any] = {
         'dispatch': 'batch',
     },
     'extract': {
+        # Batch dispatch, as `screen` and `assess` use: half the per-token
+        # price, at the cost of an unpredictable wait (minutes to hours).
+        'dispatch': 'batch',
         # One LLM call per paper answers this whole block as a single
         # JSON object, each field carrying a verbatim supporting quote,
         # so a richer field set costs output tokens rather than input
@@ -510,6 +513,9 @@ config: dict[str, typing.Any] = {
     # concern re-appraises without re-extracting - that decoupling is why
     # `appraise` is a stage of its own rather than extra extract fields.
     'appraise': {
+        # Batch dispatch, as `screen` and `assess` use: half the per-token
+        # price, at the cost of an unpredictable wait (minutes to hours).
+        'dispatch': 'batch',
         'domains': {
             'Participants': (
                 'Were the people whose language was analysed an appropriate sample for the '
