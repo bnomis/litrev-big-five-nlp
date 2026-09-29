@@ -237,7 +237,8 @@ config: dict[str, typing.Any] = {
         # the resolver chain after several hundred PDFs this review has
         # already decided it does not want.
         'input_path': 'output/assessments/screened.json',
-        # `unpaywall` is deliberately absent. It is the one resolver that
+        # `unpaywall` is last in the chain, enabled 2026-09-27 once
+        # `unpaywall_email` was set. It was absent until then: it is the one resolver that
         # needs configuring - the Unpaywall API requires an email address
         # as a courtesy identifier - and without `download.unpaywall_email`
         # it raises a ResolverError for every item it is handed rather than
@@ -270,8 +271,8 @@ config: dict[str, typing.Any] = {
         # rate limiter with the searcher's semantic_scholar source, so it
         # cannot race that stage against the same host. It is not free:
         # that shared limiter took the stage from 5m27s to 26m.
-        'resolvers': ['direct', 'arxiv', 'semantic_scholar', 'doi'],
-        # 'unpaywall_email': '<your-email>',
+        'resolvers': ['direct', 'arxiv', 'semantic_scholar', 'doi', 'unpaywall'],
+        'unpaywall_email': 'bnomis@gmail.com',
         'max_concurrent': 5,
     },
     'convert': {
