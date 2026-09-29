@@ -1,0 +1,6 @@
+{
+  "doi:10.31234/osf.io/94xcp": {
+    "keep": "doi:10.18653/v1/2021.socialnlp-1.12",
+    "reason": "PANDORA Talks: the PsyArXiv preprint and the ACL SocialNLP 2021 paper are one paper - their PDFs are byte-identical. Keep the ACL (published) DOI. Merged 2026-09-29."
+  }
+}

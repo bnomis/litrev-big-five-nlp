@@ -147,6 +147,12 @@ import typing
 config: dict[str, typing.Any] = {
     'output': {'directory': 'output'},
     'logging': {'level': 'INFO'},
+    'identity': {
+        # Pairs of keys a reviewer has checked are one paper, which no
+        # record joins on its own. Every stage applies the file when it
+        # loads the identity register. Each entry carries its reason.
+        'merges': 'identity-merges.json',
+    },
     'search': {
         # Recall-oriented rather than precise: three clauses - a trait
         # vocabulary, a language-data vocabulary, and a prediction-task
