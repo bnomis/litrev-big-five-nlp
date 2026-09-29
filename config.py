@@ -378,7 +378,13 @@ config: dict[str, typing.Any] = {
             },
             'modality': {
                 'type': 'enum',
-                'choices': ['written_text', 'transcribed_speech', 'acoustic_speech', 'multimodal', 'other'],
+                'choices': [
+                    'written_text',
+                    'transcribed_speech',
+                    'acoustic_speech',
+                    'multimodal',
+                    'other',
+                ],
                 'description': 'Form of the language input. Use multimodal where a non-language channel such as audio prosody, video or images is fused with language.',
             },
             'ground_truth_method': {
@@ -407,7 +413,14 @@ config: dict[str, typing.Any] = {
             # --- Modelling ------------------------------------------------
             'task_formulation': {
                 'type': 'enum',
-                'choices': ['binary_classification', 'multiclass_classification', 'regression', 'ranking', 'generation', 'other'],
+                'choices': [
+                    'binary_classification',
+                    'multiclass_classification',
+                    'regression',
+                    'ranking',
+                    'generation',
+                    'other',
+                ],
                 'description': 'How trait prediction is posed. Binary usually means a median split per trait; regression means predicting the continuous score.',
             },
             'features_or_representation': {
@@ -484,7 +497,13 @@ config: dict[str, typing.Any] = {
             },
             'code_or_data_available': {
                 'type': 'enum',
-                'choices': ['code_and_data', 'code_only', 'data_only', 'none', 'not_stated'],
+                'choices': [
+                    'code_and_data',
+                    'code_only',
+                    'data_only',
+                    'none',
+                    'not_stated',
+                ],
                 # Same warning, same decision: 20 of the 36 releasing studies'
                 # quotes carry a URL, since a sentence announcing a release
                 # often gives one. Additive, with no derived claim resting on
@@ -593,8 +612,17 @@ config: dict[str, typing.Any] = {
         # cards rather than to a column.
         'characteristics_groups': {
             'Datasets': ['datasets', 'modality', 'ground_truth_method'],
-            'Modelling': ['task_formulation', 'features_or_representation', 'model_architecture'],
-            'Results': ['evaluation_metrics', 'validation_scheme', 'validation_split_unit', 'code_or_data_available'],
+            'Modelling': [
+                'task_formulation',
+                'features_or_representation',
+                'model_architecture',
+            ],
+            'Results': [
+                'evaluation_metrics',
+                'validation_scheme',
+                'validation_split_unit',
+                'code_or_data_available',
+            ],
         },
         # `title` is deliberately unset: it falls back to prisma.title,
         # which is the name this review already goes by. Setting it here
