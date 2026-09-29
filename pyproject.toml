@@ -1,0 +1,128 @@
+[project]
+name = "big-five-nlp"
+version = "0.1.0"
+description = "Big5 via NLP literature review"
+requires-python = ">=3.14.7,<3.15"
+dependencies = []
+
+
+[tool.uv]
+# A 14-day quarantine on every release, as a supply-chain measure: a package
+# compromised at upload is usually found and yanked well inside that window.
+# It is a rolling cutoff, so what a re-lock can reach moves with the clock.
+exclude-newer = "14 days"
+# uv's default is `if-necessary`, which adopts a pre-release whenever no stable
+# release satisfies a constraint - quietly, with the beta landing in the
+# committed lockfile as a resolver accident. Fail the resolution instead, so
+# taking a pre-release has to be a recorded decision. Relax this to `explicit`
+# and name the package if one is ever genuinely wanted.
+prerelease = "disallow"
+
+# no:
+# - win32
+# - intel macs
+environments = [
+    "sys_platform != 'win32' and (sys_platform != 'darwin' or platform_machine != 'x86_64')",
+]
+
+
+[tool.ruff]
+line-length = 160
+
+
+[tool.ruff.format]
+quote-style = "single"
+
+
+[tool.ruff.lint]
+# ANN: flake8-annotations
+# B: flake8-bugbear
+# E: pycodestyle
+# F: Pyflakes
+# I: isort
+# ICN: import convention
+# S: bandit
+# SIM: flake8-simplify
+# TID: tidy imports
+# UP: pyupgrade
+select = [
+    "ANN",
+    "B",
+    "E",
+    "F",
+    "I",
+    "ICN",
+    "S",
+    "SIM",
+    "NPY201",
+    "TID",
+    # "UP",
+]
+# ignore
+# ANN401 typing.Any in an annotation. The invariant this project holds is that
+#        every signature carries annotations, not that no annotation may be
+#        Any: JSON-shaped test data, a **kwargs forwarded verbatim to a mock,
+#        and citeproc's own untyped surface are honestly Any, and spelling
+#        them otherwise would be a fiction a reader has to see through.
+# E501 (line length violations)
+# E722 Do not use bare `except`
+# ICN001 import numpy, pandas ok
+# SIM108 Use ternary operator
+# SIM102 collapsible-if
+# S110 try/except/pass
+# S311 random
+ignore = [
+    "ANN401",
+    "E501",
+    "E722",
+    'ICN001',
+    'SIM108',
+    'SIM102',
+    'S110',
+    'S311',
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/test*.py" = [
+    "ARG",     # Unused function args -> fixtures nevertheless are functionally relevant...
+    "FBT",     # Don't care about booleans as positional arguments in tests, e.g. via @pytest.mark.parametrize()
+    "F403",    # import *
+    "PLR2004", # Magic value used in comparison, ...
+    "S101",    # asserts allowed in tests...
+    "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "S603",    # subprocess calls in tests are safe
+    "S608",    # SQL injection
+]
+"**/fixtures/*.py" = [
+    "ARG",     # Unused function args -> fixtures nevertheless are functionally relevant...
+    "FBT",     # Don't care about booleans as positional arguments in tests, e.g. via @pytest.mark.parametrize()
+    "F403",    # import *
+    "PLR2004", # Magic value used in comparison, ...
+    "S101",    # asserts allowed in tests...
+    "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "S608",    # SQL injection
+]
+
+[tool.ruff.lint.flake8-import-conventions]
+# ICN003: `from X import Y` is permitted only in an __init__.py re-export list
+# (see AGENTS.md's Imports). The authoritative check is the full-path-imports
+# pre-commit hook, which asks the whole question and needs no list; this is
+# the fast half, so the violations that actually recur are caught in the
+# editor and by `ruff check` rather than only at commit time. Add a module
+# here when one starts showing up; the hook catches it either way.
+banned-from = [
+    "collections.abc",
+    "dataclasses",
+    "datetime",
+    "enum",
+    "loguru",
+    "pathlib",
+    "typing",
+    "unittest.mock",
+]
+
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["litlib", "tests"]
+known-third-party = ["pytest"]
