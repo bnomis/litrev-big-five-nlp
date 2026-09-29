@@ -54,6 +54,7 @@ cd ../../litrev
 |-------|---------|----------|-------------------------------|
 | Search | `bin/litrev.sh search` | `output/<source>.json` per source | A source that errors is reported, not silently skipped - check the log before moving on |
 | Filter | `bin/litrev.sh filter` | `output/filtered.json`, `output/rejected.json` | Read `rejected.json` once. A keyword doing more work than intended shows up here and nowhere else |
+| Enrich | `bin/litrev.sh enrich` | `output/enrich/enrichment.json` | Records with no abstract are looked up on OpenAlex. `near_miss` rows name a candidate title that failed the match - worth a glance |
 | Screen | `bin/litrev.sh screen` | `output/assessments/screening.json` | The first real cost. Check a handful of `exclude` decisions against their reasons before trusting the rest |
 | Download | `bin/litrev.sh download` | `output/downloads/` + manifest | Paywalled papers fail here by design. The manifest records why, per paper |
 | Convert | `bin/litrev.sh convert` | `output/markdown/<slug>/paper.md` | Slow, and the first run pulls docling's models. Spot-check one converted results table |

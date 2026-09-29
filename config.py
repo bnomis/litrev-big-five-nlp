@@ -127,6 +127,7 @@ The key is never set here - see README: Secrets. Export
 
     bin/litrev.sh search
     bin/litrev.sh filter
+    bin/litrev.sh enrich
     bin/litrev.sh screen
     bin/litrev.sh download
     bin/litrev.sh convert
@@ -192,7 +193,11 @@ config: dict[str, typing.Any] = {
         # term is ever added back, it must be long enough not to appear
         # inside an unrelated word: 'zebrafish' is safe, 'rat' is not.
         'exclude_keywords': [],
-        'required_fields': ['abstract', 'issued', 'title'],
+        # 'abstract' is deliberately not required: 510 records that passed
+        # the keyword filter were dropped for having none (2026-09-26),
+        # Majumder et al. 2017 among them. `enrich` fills what OpenAlex
+        # holds, and `screen` records `no_abstract` for the rest.
+        'required_fields': ['issued', 'title'],
         'similarity_threshold': 0.85,
     },
     'llm': {
