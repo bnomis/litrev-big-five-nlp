@@ -2,5 +2,17 @@
   "doi:10.31234/osf.io/94xcp": {
     "keep": "doi:10.18653/v1/2021.socialnlp-1.12",
     "reason": "PANDORA Talks: the PsyArXiv preprint and the ACL SocialNLP 2021 paper are one paper - their PDFs are byte-identical. Keep the ACL (published) DOI. Merged 2026-09-29."
+  },
+  "csl:semantic_scholar:0ecbb100bcfd803b9677008eba1445cc6dcdcdb4": {
+    "keep": "doi:10.1007/s42001-022-00178-4",
+    "reason": "The arXiv preprint (Feizi-Derakhshi et al. 2021) of the JCSS bibliographic review: same nine authors, and the hand-fetched preprint PDF is byte-identical to the published one. Keep the published DOI. Merged 2026-09-30."
+  },
+  "csl:arxiv:2304.02313": {
+    "keep": "doi:10.48550/arxiv.2304.02313",
+    "reason": "Personality-aware Human-centric Multimodal Reasoning (Zhu, Shen and Xia 2023): the arXiv record is the same paper as its arXiv DOI; the operator matched the PDF to arXiv 2304.02313. Merged 2026-09-30."
+  },
+  "csl:semantic_scholar:da416c9d950f99581f59baebd5507766f5db6ef9": {
+    "keep": "doi:10.48550/arxiv.2507.04005",
+    "reason": "Exploring a Gamified Personality Assessment Method (Zhang et al. 2025): the Semantic Scholar record (\"...LLM Agents Embodying Different Personalities\") is another version of the arXiv paper (\"...Multi-Personality LLM Agents\"); same first four and last three authors, July 2025, the abstract names Multi-PR GPA. Operator confirmed one paper. Merged 2026-09-30."
   }
 }
