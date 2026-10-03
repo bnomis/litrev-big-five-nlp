@@ -5,7 +5,8 @@
   },
   "csl:semantic_scholar:0ecbb100bcfd803b9677008eba1445cc6dcdcdb4": {
     "keep": "doi:10.1007/s42001-022-00178-4",
-    "reason": "The arXiv preprint (Feizi-Derakhshi et al. 2021) of the JCSS bibliographic review: same nine authors, and the hand-fetched preprint PDF is byte-identical to the published one. Keep the published DOI. Merged 2026-09-30."
+    "assessment": "doi:10.1007/s42001-022-00178-4",
+    "reason": "The arXiv preprint (Feizi-Derakhshi et al. 2021) of the JCSS bibliographic review: same nine authors, and the hand-fetched preprint PDF is byte-identical to the published one. Keep the published DOI. Merged 2026-09-30. Screening disagreed (published include, preprint unclear); the published version's include stands - both were retrieved and excluded at full text, so nothing downstream changes. Settled 2026-10-03."
   },
   "csl:arxiv:2304.02313": {
     "keep": "doi:10.48550/arxiv.2304.02313",
