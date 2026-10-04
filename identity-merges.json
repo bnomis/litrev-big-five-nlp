@@ -15,5 +15,25 @@
   "csl:semantic_scholar:da416c9d950f99581f59baebd5507766f5db6ef9": {
     "keep": "doi:10.48550/arxiv.2507.04005",
     "reason": "Exploring a Gamified Personality Assessment Method (Zhang et al. 2025): the Semantic Scholar record (\"...LLM Agents Embodying Different Personalities\") is another version of the arXiv paper (\"...Multi-Personality LLM Agents\"); same first four and last three authors, July 2025, the abstract names Multi-PR GPA. Operator confirmed one paper. Merged 2026-09-30."
+  },
+  "csl:acl_anthology:W16-4303": {
+    "distinct": "csl:acl_anthology:E17-1071",
+    "reason": "PEOPLES 2016 workshop paper (Liu, Perez and Nowson), not their EACL 2017 paper: ACL Anthology lists W16-4303 and E17-1071 as two papers, and the titles differ (\"Recurrent\" against \"Language-independent\"), as do venue, year and pages. Joined by the 2026-09-22 title pass at ratio 0.885. Split 2026-10-03."
+  },
+  "csl:semantic_scholar:d0bfe7db67f64250b923db8ee9915c9b0da416bc": {
+    "distinct": "csl:acl_anthology:E17-1071",
+    "reason": "Semantic Scholar's record of the PEOPLES 2016 workshop paper (ACL W16-4303), found by snowball, not the EACL 2017 paper. Its title matches W16-4303 exactly. Split 2026-10-03."
+  },
+  "csl:semantic_scholar:c5d1cc128d0f31511683b2f5c3c1080717eda8a7": {
+    "distinct": "csl:semantic_scholar:46f78ebd874301db97ca6f28e09b7f48fe40515d",
+    "reason": "The WASSA 2021 shared-task overview, not its WASSA 2022 successor: a different year's task. Joined by the 2026-09-22 title pass at ratio 0.870. Split 2026-10-03."
+  },
+  "csl:semantic_scholar:63dbd41886646d796ba5e72a08aaf8254147e745": {
+    "distinct": "csl:semantic_scholar:87c9782e4d47bad4addde9a3a790145483fb6059",
+    "reason": "Overview of the Author Profiling Task at PAN 2013, not the 3rd one at PAN 2015: a different year's task. Joined by the 2026-09-22 title pass at ratio 0.941. Split 2026-10-03."
+  },
+  "csl:semantic_scholar:04606cdf876e05a18dc531698aa7b16381ea49b3": {
+    "distinct": "csl:semantic_scholar:f922885c8f5d931815b40b5cfbcd452a852866bb",
+    "reason": "Overview of the Celebrity Profiling Task at PAN 2019, not its PAN 2020 successor: a different year's task. Joined by the 2026-09-22 title pass at ratio 0.962. Split 2026-10-03."
   }
 }
