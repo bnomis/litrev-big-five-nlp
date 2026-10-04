@@ -277,7 +277,7 @@ config: dict[str, typing.Any] = {
         # rate limiter with the searcher's semantic_scholar source, so it
         # cannot race that stage against the same host. It is not free:
         # that shared limiter took the stage from 5m27s to 26m.
-        'resolvers': ['direct', 'arxiv', 'semantic_scholar', 'doi', 'unpaywall'],
+        'resolvers': ['acl_anthology', 'direct', 'arxiv', 'semantic_scholar', 'doi', 'unpaywall'],
         'unpaywall_email': 'bnomis@gmail.com',
         'max_concurrent': 5,
     },
