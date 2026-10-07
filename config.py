@@ -582,6 +582,92 @@ config: dict[str, typing.Any] = {
         'unit_field': 'datasets',
         'unit_domains': ['Participants', 'Outcome'],
     },
+    'tabulate': {
+        # `headline_results` above is one prose string per paper, so the
+        # report can quote a study's best number but not compare numbers
+        # across studies. This table asks for every number instead, one
+        # row each, so a dataset's results can be lined up and charted.
+        #
+        # `model` and `role` are not in the tabulator spec's example. Without
+        # them a majority-class baseline and the paper's own system are
+        # indistinguishable rows on the same dataset, trait and metric.
+        #
+        # Union budget: `dataset`, `model` and `score` are nullable non-enum
+        # columns and cost one each; the enums, `quote` and `location` cost
+        # nothing - far under Anthropic's ceiling.
+        #
+        # Sized on 2026-10-07 from extract's recorded input (about 27k
+        # tokens a paper over 171 papers): first `sample` 5 immediately to
+        # record real output tokens, then the full run on the Batch API.
+        # A second 5-paper sample of the narrowed table (below) recorded
+        # 121k input and 69k output tokens, $0.93 immediate; the full run
+        # was then estimated at about $16 on the Batch API.
+        'dispatch': 'batch',
+        'tables': {
+            'results': {
+                # Narrowed 2026-10-07 after a 5-paper sample of a wider
+                # wording ("every quantitative result") cost $1.31: it
+                # averaged 21k output tokens a paper, 76 of its 345 rows were
+                # emotion or sarcasm results with no trait, one paper sent 174
+                # rows of ablation variants, and one hit max_tokens and
+                # failed. Test-set Big Five results for the final system,
+                # its baselines and prior work are what the report compares.
+                'description': (
+                    'One row per Big Five personality prediction result the paper reports on held-out test data. '
+                    'Ignore results for any other task (emotion, sentiment, sarcasm, and so on), and development or '
+                    "validation results when test results are given. For the paper's own system, give only its final "
+                    'or best configuration, not ablations or intermediate variants; give every baseline and prior '
+                    'system the paper compares against in its main results. '
+                    'Emit a row for each combination of model, dataset, trait and metric the paper gives a number for. '
+                    'Do not compute numbers the paper does not state.'
+                ),
+                'columns': {
+                    'dataset': {
+                        'type': 'str',
+                        'description': 'The corpus the result is on, as the paper names it (for example "Essays", "myPersonality", "PAN-2015").',
+                    },
+                    'model': {
+                        'type': 'str',
+                        'description': 'The model or system the result belongs to, as the paper names it in its results table.',
+                    },
+                    'role': {
+                        'type': 'enum',
+                        'choices': ['proposed', 'baseline', 'prior_work'],
+                        'description': (
+                            "proposed: the paper's own system or a variant of it. baseline: a simple reference the "
+                            'paper runs (majority class, random, a plain classifier). prior_work: a published system '
+                            'the paper reruns or quotes.'
+                        ),
+                    },
+                    'trait': {
+                        'type': 'enum',
+                        'choices': ['O', 'C', 'E', 'A', 'N', 'average'],
+                        'description': 'The Big Five trait the number is for; average when the paper reports one figure over the five traits. Never empty: a result with no trait is not a row.',
+                    },
+                    'metric': {
+                        'type': 'enum',
+                        'choices': ['accuracy', 'f1_macro', 'f1_weighted', 'f1', 'auc', 'pearson_r', 'rmse', 'mae', 'other'],
+                        'description': 'The metric. Use f1 when the paper does not say how F1 is averaged.',
+                    },
+                    'score': {
+                        'type': 'float',
+                        'description': 'The value as reported, on the scale reported (a percentage stays a percentage).',
+                    },
+                },
+                'max_tokens': 32768,
+            },
+        },
+    },
+    'normalise': {
+        # One vocabulary keys both the extracted `datasets` field (on the
+        # name before report.frequency_key_separator) and the results
+        # table's `dataset` column, so "Essays" in a table row and
+        # "Essays | essays | English | 2468 subjects" in the field count as
+        # one corpus.
+        'vocabularies': {
+            'datasets': {'fields': ['datasets'], 'columns': ['results.dataset']},
+        },
+    },
     'store': {
         'path': 'output/litrev.db',
     },
