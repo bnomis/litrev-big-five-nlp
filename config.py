@@ -603,6 +603,12 @@ config: dict[str, typing.Any] = {
         # 121k input and 69k output tokens, $0.93 immediate; the full run
         # was then estimated at about $16 on the Batch API.
         'dispatch': 'batch',
+        # Set 2026-10-08 for the re-run of the papers that failed. The full
+        # run sent no effort, and adaptive thinking is billed as output:
+        # one paper wrote 11.9k output tokens for about 1.1k characters of
+        # quotes. Not part of the prompt hash, so the extracted papers
+        # still carry forward.
+        'effort': 'low',
         'tables': {
             'results': {
                 # Narrowed 2026-10-07 after a 5-paper sample of a wider
@@ -654,7 +660,13 @@ config: dict[str, typing.Any] = {
                         'description': 'The value as reported, on the scale reported (a percentage stays a percentage).',
                     },
                 },
-                'max_tokens': 32768,
+                # Raised 2026-10-08 from 32768, at which 11 papers were cut
+                # off and recorded failed. 160000 clears the 128k
+                # synchronous ceiling and halves the worst case of the 300k
+                # batch one: at most about $10 for the re-run on Sonnet 5's
+                # $5/MTok batch output. Not hashed, so only failed papers
+                # are re-sent.
+                'max_tokens': 160000,
             },
         },
     },
