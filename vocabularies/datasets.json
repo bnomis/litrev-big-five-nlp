@@ -1,0 +1,351 @@
+{
+  "entries": {
+    "ASF": [
+      "ASF developer email corpus (Phase 1 gold standard)",
+      "ASF ecosystem email/commit dataset (Calefato et al. 2019a replication)",
+      "ASF email corpus"
+    ],
+    "AUG-Essays": [
+      "AUG-Essays"
+    ],
+    "b5-post": [
+      "b5-post"
+    ],
+    "BIT Speaker Personality Corpus": [
+      "BIT Speaker Personality Corpus"
+    ],
+    "ChaLearn First Impressions Dataset": [
+      "ChaLearn First Impressions Dataset",
+      "First Impressions",
+      "First Impressions (FI)",
+      "First Impressions dataset",
+      "First Impressions V2",
+      "First Impressions V2 (high extreme)",
+      "First Impressions V2 (low extreme)",
+      "First Impressions V2 Dataset",
+      "FirstImpr",
+      "FIv2",
+      "FIv2 (ChaLearn First Impressions v2)"
+    ],
+    "ChatGPT": [
+      "ChatGPT interaction logs (new)",
+      "ChatGPT logs"
+    ],
+    "CLPsych-2018": [
+      "CLPsych-2018"
+    ],
+    "CLPsych-2019": [
+      "CLPsych-2019"
+    ],
+    "ContArgA": [
+      "ContArgA"
+    ],
+    "ConvAI": [
+      "ConvAI"
+    ],
+    "Cover Letters": [
+      "Cover Letters",
+      "Cover Letters Dataset"
+    ],
+    "CPED": [
+      "CPED"
+    ],
+    "CVs and free text responses": [
+      "CVs",
+      "CVs and free text responses",
+      "Free text responses",
+      "Recruiting platform dataset (CVs + free text responses)"
+    ],
+    "CXD (Columbia Deception Corpus)": [
+      "Columbia Cross-Cultural Deception (CXD) Corpus",
+      "Columbia deception corpus",
+      "Columbia deception corpus (baseline dialogue subset)",
+      "CXD",
+      "CXD (Columbia Deception Corpus)",
+      "CXD Corpus",
+      "Deceptive/non-deceptive speech corpus (Levitan et al., CXD)"
+    ],
+    "DAIC-WOZ": [
+      "DAIC-WOZ"
+    ],
+    "EAR": [
+      "EAR corpus (Mehl, Golsing & Pennebaker)",
+      "EAR-Obs",
+      "EAR-Self"
+    ],
+    "Empathic Conversations": [
+      "Empathetic Conversations",
+      "Empathic Conversations",
+      "Empathic Conversations dataset (Omitaomu et al., 2022)"
+    ],
+    "Essays": [
+      "BigFive Essays",
+      "Essay",
+      "Essays",
+      "ESSAYS",
+      "Essays (Mairesse et al., 2007)",
+      "Essays (Pennebaker & King stream-of-consciousness essay corpus)",
+      "Essays (Pennebaker & King)",
+      "Essays (Pennebaker and King, 1999)",
+      "Essays corpus (Pennebaker & King)",
+      "Essays dataset",
+      "Essays Dataset",
+      "Essays test set (same 23 participants)",
+      "Essays-BigFive",
+      "Pennebaker 2015-2023 Essays",
+      "Personality (Pennebaker and King, 1999)",
+      "stream-of-consciousness",
+      "stream-of-consciousness essay dataset",
+      "Stream-of-consciousness essays"
+    ],
+    "Essays (GloVe)": [
+      "AUG-Essays (GloVe)",
+      "Essays (GloVe)"
+    ],
+    "Essays (LIWC)": [
+      "AUG-Essays (LIWC)",
+      "Essays (LIWC)"
+    ],
+    "Essays (TF-IDF)": [
+      "AUG-Essays (TF-IDF)",
+      "Essays (TF-IDF)"
+    ],
+    "Essays (W2V)": [
+      "AUG-Essays (W2V)",
+      "Essays (W2V)"
+    ],
+    "F2": [
+      "F2",
+      "F2P"
+    ],
+    "Facebook": [
+      "Facebook",
+      "FACEBOOK",
+      "Facebook (Schwartz et al., 2013b)",
+      "Facebook Data",
+      "Facebook Likes",
+      "Facebook personality dataset",
+      "Facebook personality dataset (Jose et al. 2022 paradigm)",
+      "Facebook personality training data (Schwartz et al. 2013a)",
+      "Facebook posts",
+      "Facebook test set",
+      "FB-Demogs",
+      "PersFB",
+      "Personality dataset (Schwartz et al.)"
+    ],
+    "Filipino Twitter Corpus": [
+      "Filipino Twitter Corpus",
+      "Filipino Twitter corpus"
+    ],
+    "Fisher dataset": [
+      "Fisher dataset",
+      "Fisher dataset (folder 000 subset)"
+    ],
+    "FriendsPersona": [
+      "FriendsPersona"
+    ],
+    "GenBigFive": [
+      "GenBigFive",
+      "GenBigFive (new)"
+    ],
+    "HiTOP": [
+      "HiTOP",
+      "HiTOP-Segments (HiTOP)"
+    ],
+    "Indonesian Twitter Personality Dataset": [
+      "Indonesian Twitter dataset",
+      "Indonesian Twitter Personality Dataset",
+      "Twitter Bahasa Indonesia corpus"
+    ],
+    "Kaggle (PersonalityCafe)": [
+      "Kaggle",
+      "Kaggle (MBTI)",
+      "Kaggle (PersonalityCafe forum)",
+      "Kaggle (PersonalityCafe)",
+      "Kaggle dataset",
+      "Kaggle MBTI",
+      "Kaggle MBTI dataset",
+      "MBTI (Kaggle, PersonalityCafe forum)",
+      "MBTI (Personality Café / Kaggle)",
+      "MBTI Kaggle",
+      "Twitter-MBTI"
+    ],
+    "LinkedIn profiles": [
+      "LinkedIn profiles",
+      "LinkedIn profiles (own sample)"
+    ],
+    "LLM Personality": [
+      "LLM Personality"
+    ],
+    "Mandarin Conversational Dialogue Corpus (MCDC)": [
+      "Mandarin Conversational Dialogue Corpus (MCDC)",
+      "MCDC"
+    ],
+    "MBTI9k": [
+      "MBTI9k"
+    ],
+    "MSAPersonality": [
+      "MSAPersonality"
+    ],
+    "MultiWOZ": [
+      "MultiWOZ"
+    ],
+    "myPersonality": [
+      "Facebook dataset (myPersonality)",
+      "Facebook myPersonality dataset (Kosinski et al., 2013)",
+      "Facebook profile dataset (Golbeck et al. 2011)",
+      "myPersonality",
+      "MyPersonality",
+      "myPersonality (Facebook status updates)",
+      "myPersonality (informant subsample)",
+      "myPersonality dataset",
+      "myPersonality Facebook status updates",
+      "Private/myPersonality"
+    ],
+    "myPersonality & DAIC-WOZ": [
+      "myPersonality & DAIC-WOZ",
+      "myPersonality and DAIC-WOZ"
+    ],
+    "NC": [
+      "NC",
+      "New Corpus (NC)"
+    ],
+    "PAN-AP-2015": [
+      "Artificially enriched PAN-AP-2015 subset",
+      "PAN",
+      "PAN (PAN 2015, English sub-dataset)",
+      "PAN 2015 (10-fold, user-level)",
+      "PAN 2015 (5-fold, user-level)",
+      "PAN 2015 (Dutch subset)",
+      "PAN 2015 (EN)",
+      "PAN 2015 (English subset)",
+      "PAN 2015 (ES)",
+      "PAN 2015 (IT)",
+      "PAN 2015 (Italian subset)",
+      "PAN 2015 (Spanish subset)",
+      "PAN 2015 (tweet-level)",
+      "PAN 2015 Author Profiling dataset",
+      "PAN 2015 Author Profiling task dataset (English)",
+      "PAN 2015 Author Profiling task dataset (Italian)",
+      "PAN 2015 Author Profiling task dataset (Spanish)",
+      "PAN-2015",
+      "PAN-AP-2015",
+      "PAN-AP-2015 (artificially enriched)",
+      "PAN-AP-2015 (English subset)",
+      "PAN-author-profiling-2015 (English subset)",
+      "PAN15",
+      "pan15",
+      "pan15 (Pardo et al., 2015, PAN 2015 Author Profiling)"
+    ],
+    "PANDORA": [
+      "PANDORA",
+      "Pandora",
+      "Pandora sub",
+      "Pandora_sub"
+    ],
+    "Personality-1260": [
+      "Personality-1260"
+    ],
+    "PersonalityEvd": [
+      "PersonalityEvd",
+      "PersonalityEvd (EPR-S)",
+      "PersonalityEvd (EPR-T)"
+    ],
+    "PersonaLLM": [
+      "PersonaLLM",
+      "PersonaLLM dataset"
+    ],
+    "RealPersonaChat": [
+      "RealPersonaChat",
+      "RealPersonaChat (dialogue)",
+      "RealPersonaChat (monologue)"
+    ],
+    "Reddit": [
+      "Reddit"
+    ],
+    "Reddit Calibration Data Set": [
+      "Reddit Calibration Data Set",
+      "Reddit Calibration Data Set (new)"
+    ],
+    "Sample14": [
+      "Sample14"
+    ],
+    "Self-Descriptions": [
+      "Self-Descriptions",
+      "Self-Descriptions Dataset"
+    ],
+    "Sentiment140": [
+      "Sentiment140"
+    ],
+    "SPADE": [
+      "SPADE",
+      "SPADE (speech transcripts)"
+    ],
+    "SPAN (St. Louis Personality and Aging Network)": [
+      "SPAN",
+      "SPAN (St. Louis Personality and Aging Network)",
+      "SPAN (St. Louis Personality and Aging Network) Life Narrative Interviews",
+      "St. Louis Personality and Aging Network",
+      "St. Louis Personality and Aging Network interviews"
+    ],
+    "Story2Personality": [
+      "Story2Personality",
+      "Story2Personality (Big Five)"
+    ],
+    "TB5I": [
+      "TB5I"
+    ],
+    "Twitter": [
+      "Collected Twitter dataset (243 participants)",
+      "Real-life Twitter dataset",
+      "Twitter",
+      "TWITTER",
+      "Twitter (new)",
+      "Twitter dataset (new)",
+      "Twitter Personality Dataset",
+      "Twitter self-report dataset (this study)",
+      "Twitter survey dataset"
+    ],
+    "WASSA 2022": [
+      "WASSA 2022",
+      "WASSA 2022 Shared Task Dataset",
+      "WASSA 2022 shared task dataset (extension of Buechel et al. 2018 empathic reactions corpus)"
+    ],
+    "WASSA 2023": [
+      "WASSA 2023",
+      "WASSA 2023 conversation-level dataset",
+      "WASSA 2023 essay-level dataset",
+      "WASSA 2023 Task 3 dataset (merged with Track 4 data)",
+      "WASSA-2023 Shared Task Empathic Conversations dataset (conversation-level, used for Track1-CONV)",
+      "WASSA-2023 Shared Task Empathic Conversations dataset (essay-level, used for Track4-PER personality prediction)"
+    ],
+    "Weibo": [
+      "Sina Weibo",
+      "Sina Weibo corpus",
+      "Weibo",
+      "Weibo social media posts + BFI-44 questionnaire"
+    ],
+    "WTC": [
+      "WTC",
+      "WTC-Segments (WTC)"
+    ],
+    "Yelp": [
+      "Yelp",
+      "Yelp Dataset Challenge"
+    ],
+    "YouTube": [
+      "YOUTUBE",
+      "YouTube"
+    ],
+    "YouTube personality dataset": [
+      "YouTube personality data set",
+      "YouTube personality dataset",
+      "YouTube personality dataset (Biel & Gatica-Perez)",
+      "YouTube personality dataset (Biel and Gatica-Perez)",
+      "Youtube Vlog dataset",
+      "YouTube vloggers dataset",
+      "YouTube vlogs (IDIAP corpus)",
+      "YouTube vlogs (IDIAP)"
+    ]
+  }
+}

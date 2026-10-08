@@ -676,6 +676,12 @@ config: dict[str, typing.Any] = {
         # table's `dataset` column, so "Essays" in a table row and
         # "Essays | essays | English | 2468 subjects" in the field count as
         # one corpus.
+        #
+        # Effort set 2026-10-08 before the first run: one call of 357
+        # unmapped names against llm.anthropic.max_tokens 16384, and
+        # adaptive thinking is billed against the same cap - what cut
+        # tabulate's long papers off at 32768.
+        'effort': 'low',
         'vocabularies': {
             'datasets': {'fields': ['datasets'], 'columns': ['results.dataset']},
         },
