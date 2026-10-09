@@ -608,7 +608,14 @@ config: dict[str, typing.Any] = {
         # one paper wrote 11.9k output tokens for about 1.1k characters of
         # quotes. Not part of the prompt hash, so the extracted papers
         # still carry forward.
-        'effort': 'low',
+        #
+        # Unset again 2026-10-09, after re-sending ten papers twice unset and
+        # once at 'low' (clone big-five-nlp-cogalex-20261009, $2.03): 'low'
+        # used 43% fewer output tokens but halved the rows on two papers
+        # where both unset runs agreed, and added 80 baseline rows on one.
+        # 159 papers were extracted unset, so a re-send matches them.
+        # The 12 papers re-run on 2026-10-08 keep their 'low' rows.
+        'effort': None,
         'tables': {
             'results': {
                 # Narrowed 2026-10-07 after a 5-paper sample of a wider
