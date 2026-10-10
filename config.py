@@ -592,9 +592,14 @@ config: dict[str, typing.Any] = {
         # them a majority-class baseline and the paper's own system are
         # indistinguishable rows on the same dataset, trait and metric.
         #
-        # Union budget: `dataset`, `model` and `score` are nullable non-enum
-        # columns and cost one each; the enums, `quote` and `location` cost
-        # nothing - far under Anthropic's ceiling.
+        # Union budget: `dataset`, `split`, `model` and `score` are nullable
+        # non-enum columns and cost one each; the enums, `quote` and
+        # `location` cost nothing - far under Anthropic's ceiling.
+        #
+        # `split` added 2026-10-10: the `datasets` vocabulary folds a
+        # subset or protocol into its corpus, right for the extract field
+        # but wrong for a score, so `dataset` names the corpus alone and
+        # `split` keeps the population a score is on apart.
         #
         # Sized on 2026-10-07 from extract's recorded input (about 27k
         # tokens a paper over 171 papers): first `sample` 5 immediately to
@@ -661,7 +666,20 @@ config: dict[str, typing.Any] = {
                 'columns': {
                     'dataset': {
                         'type': 'str',
-                        'description': 'The corpus the result is on, as the paper names it (for example "Essays", "myPersonality", "PAN-2015").',
+                        'description': (
+                            'The corpus the result is on, as the paper names it (for example "Essays", '
+                            '"myPersonality", "PAN-2015"), without any subset, split or protocol: those go in split.'
+                        ),
+                    },
+                    'split': {
+                        'type': 'str',
+                        'description': (
+                            'What part of the corpus, or what evaluation protocol, the score is on when it is not '
+                            'the standard test set or evaluation: a subset (for example "high extreme subset", '
+                            '"English subset", "informant subsample"), a level ("tweet-level") or a protocol '
+                            '("10-fold cross-validation"), in a few words. Empty when the score is on the standard '
+                            'test set. Never part of dataset.'
+                        ),
                     },
                     'model': {
                         'type': 'str',
