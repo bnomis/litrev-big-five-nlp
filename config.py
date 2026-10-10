@@ -625,12 +625,24 @@ config: dict[str, typing.Any] = {
                 # rows of ablation variants, and one hit max_tokens and
                 # failed. Test-set Big Five results for the final system,
                 # its baselines and prior work are what the report compares.
+                # Method-variant and modality rows decided 2026-10-10: two
+                # re-sends with the description unchanged each flipped one
+                # whole block of them in or out (LitRev DONE.md, "Re-sending
+                # a paper to `tabulate` can change its rows with nothing
+                # changed"), so the description now says both are rows. The
+                # same test then flipped five prompted LLMs between
+                # prior_work and baseline, so `role` now places them too.
                 'description': (
                     'One row per Big Five personality prediction result the paper reports on held-out test data. '
                     'Ignore results for any other task (emotion, sentiment, sarcasm, and so on), and development or '
                     "validation results when test results are given. For the paper's own system, give only its final "
                     'or best configuration, not ablations or intermediate variants; give every baseline and prior '
                     'system the paper compares against in its main results. '
+                    "Every other method in the paper's main results table is a baseline or prior system and gets its "
+                    "rows, including alternative strategies built on the paper's own pipeline. "
+                    'For a multimodal paper, give every modality and modality combination it reports results for '
+                    "(text only, audio and text, and so on) as rows, the paper's own system on fewer modalities "
+                    'included, naming the modalities in the model. '
                     'Emit a row for each combination of model, dataset, trait and metric the paper gives a number for. '
                     'Do not compute numbers the paper does not state.'
                 ),
@@ -647,9 +659,11 @@ config: dict[str, typing.Any] = {
                         'type': 'enum',
                         'choices': ['proposed', 'baseline', 'prior_work'],
                         'description': (
-                            "proposed: the paper's own system or a variant of it. baseline: a simple reference the "
-                            'paper runs (majority class, random, a plain classifier). prior_work: a published system '
-                            'the paper reruns or quotes.'
+                            "proposed: the paper's own final system. baseline: any other method the paper runs itself - "
+                            'a simple reference (majority class, random, a plain classifier), an off-the-shelf language '
+                            'model it prompts or fine-tunes (GPT, Claude, Qwen, LLaMA and so on), an alternative strategy '
+                            "on its own pipeline, or its own system on fewer modalities. prior_work: a named method from "
+                            'another publication, cited by the paper, whether it reruns it or quotes its numbers.'
                         ),
                     },
                     'trait': {
