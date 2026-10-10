@@ -747,6 +747,11 @@ config: dict[str, typing.Any] = {
         'effort': 'low',
         'vocabularies': {
             'datasets': {'fields': ['datasets'], 'columns': ['results.dataset']},
+            # Added 2026-10-10 with the `split` column: its values are free
+            # text, and two re-sends of a paper phrased the same condition
+            # differently ("informant subsample" and "informant subsample
+            # (n=745)").
+            'splits': {'columns': ['results.split']},
         },
     },
     'store': {
