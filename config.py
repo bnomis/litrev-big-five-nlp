@@ -599,7 +599,10 @@ config: dict[str, typing.Any] = {
         # `split` added 2026-10-10: the `datasets` vocabulary folds a
         # subset or protocol into its corpus, right for the extract field
         # but wrong for a score, so `dataset` names the corpus alone and
-        # `split` keeps the population a score is on apart.
+        # `split` keeps the population a score is on apart. Narrowed the
+        # same day after the full run filled it on 49% of rows: a paper
+        # whose only evaluation is k-fold cross-validation filled it too,
+        # so `split` is now empty for a paper's main condition.
         #
         # Sized on 2026-10-07 from extract's recorded input (about 27k
         # tokens a paper over 171 papers): first `sample` 5 immediately to
@@ -674,11 +677,13 @@ config: dict[str, typing.Any] = {
                     'split': {
                         'type': 'str',
                         'description': (
-                            'What part of the corpus, or what evaluation protocol, the score is on when it is not '
-                            'the standard test set or evaluation: a subset (for example "high extreme subset", '
-                            '"English subset", "informant subsample"), a level ("tweet-level") or a protocol '
-                            '("10-fold cross-validation"), in a few words. Empty when the score is on the standard '
-                            'test set. Never part of dataset.'
+                            'Empty for the paper\'s main evaluation on the corpus - its test set, or its only '
+                            'protocol: a paper that evaluates everything by 10-fold cross-validation leaves split '
+                            'empty on every row. Fill it only when the paper reports the same corpus under more than '
+                            'one condition, and then only on the rows that are not its main one: a subset (for '
+                            'example "high extreme subset", "English subset", "informant subsample"), a level '
+                            '("tweet-level") or a second protocol ("5-fold cross-validation"), in a few words. '
+                            'Never part of dataset.'
                         ),
                     },
                     'model': {
