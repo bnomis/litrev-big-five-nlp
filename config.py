@@ -632,6 +632,12 @@ config: dict[str, typing.Any] = {
                 # changed"), so the description now says both are rows. The
                 # same test then flipped five prompted LLMs between
                 # prior_work and baseline, so `role` now places them too.
+                # `model` is one name per system within a paper since
+                # 2026-10-10: names drifted with added "(our)", citations
+                # and modality lists, and no corpus-wide vocabulary can
+                # merge each paper's own "Ours" safely. A plain "copy the
+                # label exactly" was tried first and split a system between
+                # its name and a caption-defined stand-in label.
                 'description': (
                     'One row per Big Five personality prediction result the paper reports on held-out test data. '
                     'Ignore results for any other task (emotion, sentiment, sarcasm, and so on), and development or '
@@ -642,7 +648,7 @@ config: dict[str, typing.Any] = {
                     "rows, including alternative strategies built on the paper's own pipeline. "
                     'For a multimodal paper, give every modality and modality combination it reports results for '
                     "(text only, audio and text, and so on) as rows, the paper's own system on fewer modalities "
-                    'included, naming the modalities in the model. '
+                    'included. '
                     'Emit a row for each combination of model, dataset, trait and metric the paper gives a number for. '
                     'Do not compute numbers the paper does not state.'
                 ),
@@ -653,7 +659,13 @@ config: dict[str, typing.Any] = {
                     },
                     'model': {
                         'type': 'str',
-                        'description': 'The model or system the result belongs to, as the paper names it in its results table.',
+                        'description': (
+                            'The model or system the result belongs to, with one name per system across the whole '
+                            "paper: its label in the paper's results tables, or, where a table's label is a stand-in "
+                            'the paper defines (for example a row "Baseline" whose caption says "Baseline: Audio + '
+                            'Video + Text"), the name it is defined as. Add nothing to that name - no "(ours)", '
+                            'citation, description or modality list the paper does not use as its name.'
+                        ),
                     },
                     'role': {
                         'type': 'enum',
