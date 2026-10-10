@@ -89,6 +89,11 @@ personality dataset, LinkedIn to LinkedIn profiles), the other 113 left
 unassigned, no notes. Adopted into `vocabularies/datasets.json` the same
 day: 63 labels became 70, 221 aliases 234; it loads and validates.
 
-**`splits`**: not yet answered - none of its 186 items had a decision when
-the page was read on 2026-10-10.
+**`splits`, answered 2026-10-10 on the page**: every item as recommended -
+the 50 single-name clusters approved, the 7 merging clusters rejected, the
+129 unassigned names left, no notes. Adopted as `vocabularies/splits.json`
+the same day: 50 labels and no aliases, since every approved cluster holds
+only its own name. It merges case and spacing variants only; the wording
+drift that motivated it was between re-sends, and the live run holds one
+phrasing of each condition.
 <!-- doc-counts: accept-end -->
