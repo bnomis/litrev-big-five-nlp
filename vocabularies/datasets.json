@@ -3,7 +3,8 @@
     "ASF": [
       "ASF developer email corpus (Phase 1 gold standard)",
       "ASF ecosystem email/commit dataset (Calefato et al. 2019a replication)",
-      "ASF email corpus"
+      "ASF email corpus",
+      "ASF developer email corpus"
     ],
     "AUG-Essays": [
       "AUG-Essays"
@@ -11,6 +12,7 @@
     "b5-post": [
       "b5-post"
     ],
+    "Backstage": [],
     "BIT Speaker Personality Corpus": [
       "BIT Speaker Personality Corpus"
     ],
@@ -43,6 +45,9 @@
     "ConvAI": [
       "ConvAI"
     ],
+    "Cornell Movie-Dialogs Corpus": [
+      "Movie-Dialogs Corpus"
+    ],
     "Cover Letters": [
       "Cover Letters",
       "Cover Letters Dataset"
@@ -64,6 +69,12 @@
       "CXD (Columbia Deception Corpus)",
       "CXD Corpus",
       "Deceptive/non-deceptive speech corpus (Levitan et al., CXD)"
+    ],
+    "D_HR": [
+      "D_HR (small high-reliability dataset)"
+    ],
+    "D_LR": [
+      "D_LR (large low-reliability dataset)"
     ],
     "DAIC-WOZ": [
       "DAIC-WOZ"
@@ -96,7 +107,8 @@
       "Personality (Pennebaker and King, 1999)",
       "stream-of-consciousness",
       "stream-of-consciousness essay dataset",
-      "Stream-of-consciousness essays"
+      "Stream-of-consciousness essays",
+      "Stream-of-consciousness writing"
     ],
     "Essays (GloVe)": [
       "AUG-Essays (GloVe)",
@@ -139,8 +151,10 @@
     ],
     "Fisher dataset": [
       "Fisher dataset",
-      "Fisher dataset (folder 000 subset)"
+      "Fisher dataset (folder 000 subset)",
+      "Fisher"
     ],
+    "FriendFeed": [],
     "FriendsPersona": [
       "FriendsPersona"
     ],
@@ -155,7 +169,8 @@
     "Indonesian Twitter Personality Dataset": [
       "Indonesian Twitter dataset",
       "Indonesian Twitter Personality Dataset",
-      "Twitter Bahasa Indonesia corpus"
+      "Twitter Bahasa Indonesia corpus",
+      "Twitter (Indonesian dataset)"
     ],
     "Kaggle (PersonalityCafe)": [
       "Kaggle",
@@ -172,7 +187,8 @@
     ],
     "LinkedIn profiles": [
       "LinkedIn profiles",
-      "LinkedIn profiles (own sample)"
+      "LinkedIn profiles (own sample)",
+      "LinkedIn"
     ],
     "LLM Personality": [
       "LLM Personality"
@@ -181,6 +197,7 @@
       "Mandarin Conversational Dialogue Corpus (MCDC)",
       "MCDC"
     ],
+    "MaSaC": [],
     "MBTI9k": [
       "MBTI9k"
     ],
@@ -235,7 +252,8 @@
       "PAN-author-profiling-2015 (English subset)",
       "PAN15",
       "pan15",
-      "pan15 (Pardo et al., 2015, PAN 2015 Author Profiling)"
+      "pan15 (Pardo et al., 2015, PAN 2015 Author Profiling)",
+      "PAN 2015"
     ],
     "PANDORA": [
       "PANDORA",
@@ -309,7 +327,8 @@
     "WASSA 2022": [
       "WASSA 2022",
       "WASSA 2022 Shared Task Dataset",
-      "WASSA 2022 shared task dataset (extension of Buechel et al. 2018 empathic reactions corpus)"
+      "WASSA 2022 shared task dataset (extension of Buechel et al. 2018 empathic reactions corpus)",
+      "WASSA-2022"
     ],
     "WASSA 2023": [
       "WASSA 2023",
@@ -318,6 +337,9 @@
       "WASSA 2023 Task 3 dataset (merged with Track 4 data)",
       "WASSA-2023 Shared Task Empathic Conversations dataset (conversation-level, used for Track1-CONV)",
       "WASSA-2023 Shared Task Empathic Conversations dataset (essay-level, used for Track4-PER personality prediction)"
+    ],
+    "WASSA 2024 Track 4": [
+      "WASSA 2024 Track 4 PER dataset"
     ],
     "Weibo": [
       "Sina Weibo",
@@ -345,7 +367,9 @@
       "Youtube Vlog dataset",
       "YouTube vloggers dataset",
       "YouTube vlogs (IDIAP corpus)",
-      "YouTube vlogs (IDIAP)"
+      "YouTube vlogs (IDIAP)",
+      "YouTube Personality",
+      "YouTube vloggers"
     ]
   }
 }

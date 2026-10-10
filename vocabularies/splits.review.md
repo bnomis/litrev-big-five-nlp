@@ -81,4 +81,14 @@ undecided.
 
 ## Answers
 
-Not yet given.
+<!-- doc-counts: accept-start answers given on 2026-10-10 - a record, not a claim about the present -->
+**`datasets`, answered 2026-10-10 on the page**: every item as
+recommended - the 13 clusters approved, the three names assigned
+(Stream-of-consciousness writing to Essays, YouTube vloggers to YouTube
+personality dataset, LinkedIn to LinkedIn profiles), the other 113 left
+unassigned, no notes. Adopted into `vocabularies/datasets.json` the same
+day: 63 labels became 70, 221 aliases 234; it loads and validates.
+
+**`splits`**: not yet answered - none of its 186 items had a decision when
+the page was read on 2026-10-10.
+<!-- doc-counts: accept-end -->
