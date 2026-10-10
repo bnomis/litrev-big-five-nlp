@@ -637,7 +637,10 @@ config: dict[str, typing.Any] = {
                 # and modality lists, and no corpus-wide vocabulary can
                 # merge each paper's own "Ours" safely. A plain "copy the
                 # label exactly" was tried first and split a system between
-                # its name and a caption-defined stand-in label.
+                # its name and a caption-defined stand-in label. A result
+                # printed twice is given once, and an unnamed system gets
+                # an empty model, since 2026-10-10: both flipped between
+                # two re-sends of the same paper.
                 'description': (
                     'One row per Big Five personality prediction result the paper reports on held-out test data. '
                     'Ignore results for any other task (emotion, sentiment, sarcasm, and so on), and development or '
@@ -650,6 +653,9 @@ config: dict[str, typing.Any] = {
                     "(text only, audio and text, and so on) as rows, the paper's own system on fewer modalities "
                     'included. '
                     'Emit a row for each combination of model, dataset, trait and metric the paper gives a number for. '
+                    'When the paper prints the same result in more than one place (a column of a second table that '
+                    'repeats the first, or a figure restated in the text), give it once, from the first table that '
+                    'reports it. '
                     'Do not compute numbers the paper does not state.'
                 ),
                 'columns': {
@@ -664,7 +670,8 @@ config: dict[str, typing.Any] = {
                             "paper: its label in the paper's results tables, or, where a table's label is a stand-in "
                             'the paper defines (for example a row "Baseline" whose caption says "Baseline: Audio + '
                             'Video + Text"), the name it is defined as. Add nothing to that name - no "(ours)", '
-                            'citation, description or modality list the paper does not use as its name.'
+                            'citation, description or modality list the paper does not use as its name. A system the '
+                            'paper describes but never names gets no model: leave it empty rather than invent a name.'
                         ),
                     },
                     'role': {
