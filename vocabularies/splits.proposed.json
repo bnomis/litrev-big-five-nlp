@@ -1,208 +1,6 @@
 {
-  "entries": {
-    "10-fold cross-validation": [
-      "English subset, 10-fold cross-validation",
-      "English subset, tweet-level, 10-fold cross-validation",
-      "Italian subset, 10-fold cross-validation",
-      "Italian subset, tweet-level, 10-fold cross-validation",
-      "Spanish subset, 10-fold cross-validation",
-      "Spanish subset, tweet-level, 10-fold cross-validation"
-    ],
-    "English": [
-      "English data",
-      "English subset"
-    ],
-    "English, 5-fold cross-validation": [
-      "English subset, 5-fold cross-validation"
-    ],
-    "Italian": [
-      "Italian regression",
-      "Italian subset"
-    ],
-    "Italian, 5-fold cross-validation": [
-      "Italian subset, 5-fold cross-validation"
-    ],
-    "Spanish": [
-      "Spanish regression",
-      "Spanish subset"
-    ],
-    "Spanish, 5-fold cross-validation": [
-      "Spanish subset, 5-fold cross-validation"
-    ],
-    "data type: Account Credentials": [
-      "Account Credentials"
-    ],
-    "data type: Age": [
-      "Age"
-    ],
-    "data type: Criminal Records": [
-      "Criminal Records"
-    ],
-    "data type: Ethnicity and Citizenship": [
-      "Ethnicity and Citizenship"
-    ],
-    "data type: Family Life and Relation.": [
-      "Family Life and Relation."
-    ],
-    "data type: Gender": [
-      "Gender"
-    ],
-    "data type: Job and Education": [
-      "Job and Education"
-    ],
-    "data type: Lifestyle and Habits": [
-      "Lifestyle and Habits"
-    ],
-    "data type: Location and Mobility": [
-      "Location and Mobility"
-    ],
-    "data type: Mental Health": [
-      "Mental Health"
-    ],
-    "data type: Mental State, Pers., Mood": [
-      "Mental State, Pers., Mood"
-    ],
-    "data type: Personal Identifiers": [
-      "Personal Identifiers"
-    ],
-    "data type: Physical Health Diagnosis": [
-      "Physical Health Diagnosis"
-    ],
-    "data type: Physical Traits": [
-      "Physical Traits"
-    ],
-    "data type: Political Views": [
-      "Political Views"
-    ],
-    "data type: Recreational Consumption": [
-      "Recreational Consumption"
-    ],
-    "data type: Religion": [
-      "Religion"
-    ],
-    "data type: Sex. and Dating Activities": [
-      "Sex. and Dating Activities"
-    ],
-    "data type: Sexual orientation": [
-      "Sexual orientation"
-    ],
-    "data type: Wealth Details Salary": [
-      "Wealth Details Salary"
-    ],
-    "use case: Arg. or Summary Gen.": [
-      "Arg. or Summary Gen."
-    ],
-    "use case: Asking About the Model": [
-      "Asking About the Model"
-    ],
-    "use case: Computer Programming": [
-      "Computer Programming"
-    ],
-    "use case: Cooking and Recipes": [
-      "Cooking and Recipes"
-    ],
-    "use case: Creative Ideation": [
-      "Creative Ideation"
-    ],
-    "use case: Data Analysis": [
-      "Data Analysis"
-    ],
-    "use case: Edit/Critique Provided Text": [
-      "Edit/Critique Provided Text"
-    ],
-    "use case: Games and Role Play": [
-      "Games and Role Play"
-    ],
-    "use case: Gen./Retrieve Other Media": [
-      "Gen./Retrieve Other Media"
-    ],
-    "use case: Greetings and Chitchat": [
-      "Greetings and Chitchat"
-    ],
-    "use case: Health/Fit./Beauty/S.-Care": [
-      "Health/Fit./Beauty/S.-Care"
-    ],
-    "use case: How-To Advice": [
-      "How-To Advice"
-    ],
-    "use case: Mathematical Calculation": [
-      "Mathematical Calculation"
-    ],
-    "use case: Personal Writing or Comm.": [
-      "Personal Writing or Comm."
-    ],
-    "use case: Purchasable Products": [
-      "Purchasable Products"
-    ],
-    "use case: Relation. and Pers. Reflect.": [
-      "Relation. and Pers. Reflect."
-    ],
-    "use case: Specific Info": [
-      "Specific Info"
-    ],
-    "use case: Translation": [
-      "Translation"
-    ],
-    "use case: Tutoring or Teaching": [
-      "Tutoring or Teaching"
-    ],
-    "use case: Unclear": [
-      "Unclear"
-    ],
-    "use case: Write Fiction": [
-      "Write Fiction"
-    ]
-  },
-  "rationale": {
-    "10-fold cross-validation": "All use 10-fold cross-validation on language subsets, differing only by language.",
-    "English": "Plain references to the English language subset/data.",
-    "English, 5-fold cross-validation": "English subset with 5-fold cross-validation matches canonical combined label.",
-    "Italian": "Plain references to the Italian language subset.",
-    "Italian, 5-fold cross-validation": "Italian subset with 5-fold cross-validation matches canonical combined label.",
-    "Spanish": "Plain references to the Spanish language subset.",
-    "Spanish, 5-fold cross-validation": "Spanish subset with 5-fold cross-validation matches canonical combined label.",
-    "data type: Account Credentials": "Exact match to canonical data type label.",
-    "data type: Age": "Exact match to canonical data type label.",
-    "data type: Criminal Records": "Exact match to canonical data type label.",
-    "data type: Ethnicity and Citizenship": "Exact match to canonical data type label.",
-    "data type: Family Life and Relation.": "Exact match to canonical data type label.",
-    "data type: Gender": "Exact match to canonical data type label.",
-    "data type: Job and Education": "Exact match to canonical data type label.",
-    "data type: Lifestyle and Habits": "Exact match to canonical data type label.",
-    "data type: Location and Mobility": "Exact match to canonical data type label.",
-    "data type: Mental Health": "Exact match to canonical data type label.",
-    "data type: Mental State, Pers., Mood": "Exact match to canonical data type label.",
-    "data type: Personal Identifiers": "Exact match to canonical data type label.",
-    "data type: Physical Health Diagnosis": "Exact match to canonical data type label.",
-    "data type: Physical Traits": "Exact match to canonical data type label.",
-    "data type: Political Views": "Exact match to canonical data type label.",
-    "data type: Recreational Consumption": "Exact match to canonical data type label.",
-    "data type: Religion": "Exact match to canonical data type label.",
-    "data type: Sex. and Dating Activities": "Exact match to canonical data type label.",
-    "data type: Sexual orientation": "Exact match to canonical data type label.",
-    "data type: Wealth Details Salary": "Exact match to canonical data type label.",
-    "use case: Arg. or Summary Gen.": "Exact match to canonical use case label.",
-    "use case: Asking About the Model": "Exact match to canonical use case label.",
-    "use case: Computer Programming": "Exact match to canonical use case label.",
-    "use case: Cooking and Recipes": "Exact match to canonical use case label.",
-    "use case: Creative Ideation": "Exact match to canonical use case label.",
-    "use case: Data Analysis": "Exact match to canonical use case label.",
-    "use case: Edit/Critique Provided Text": "Exact match to canonical use case label.",
-    "use case: Games and Role Play": "Exact match to canonical use case label.",
-    "use case: Gen./Retrieve Other Media": "Exact match to canonical use case label.",
-    "use case: Greetings and Chitchat": "Exact match to canonical use case label.",
-    "use case: Health/Fit./Beauty/S.-Care": "Exact match to canonical use case label.",
-    "use case: How-To Advice": "Exact match to canonical use case label.",
-    "use case: Mathematical Calculation": "Exact match to canonical use case label.",
-    "use case: Personal Writing or Comm.": "Exact match to canonical use case label.",
-    "use case: Purchasable Products": "Exact match to canonical use case label.",
-    "use case: Relation. and Pers. Reflect.": "Exact match to canonical use case label.",
-    "use case: Specific Info": "Exact match to canonical use case label.",
-    "use case: Translation": "Exact match to canonical use case label.",
-    "use case: Tutoring or Teaching": "Exact match to canonical use case label.",
-    "use case: Unclear": "Exact match to canonical use case label.",
-    "use case: Write Fiction": "Exact match to canonical use case label."
-  },
+  "entries": {},
+  "rationale": {},
   "unassigned": [
     "'High' class recall",
     "'Low' class recall",
@@ -238,12 +36,16 @@
     "Dutch subset",
     "Dutch test data translated into English",
     "English mother tongue subset",
+    "English subset, 10-fold cross-validation",
+    "English subset, tweet-level, 10-fold cross-validation",
     "F2P feature subset (excludes standard deviation and friend features)",
     "F3 feature subset (FSS-selected features)",
     "Global Five subset",
     "HIGH class",
     "Human-to-AI classification",
     "Ideas facet",
+    "Italian subset, 10-fold cross-validation",
+    "Italian subset, tweet-level, 10-fold cross-validation",
     "Italian test data translated into English",
     "LIWC-based features (L)",
     "LLM-generated texts",
@@ -279,6 +81,8 @@
     "S5: LIWC + Demographic + TF-IDF features",
     "Self-discipline facet",
     "Short (<1,500 words)",
+    "Spanish subset, 10-fold cross-validation",
+    "Spanish subset, tweet-level, 10-fold cross-validation",
     "Spanish test data translated into English",
     "Trivial-ZS (relevant text removed)",
     "Unconstrained user condition",
@@ -305,7 +109,6 @@
     "cross-domain (model trained on Essays)",
     "cross-domain (model trained on Reddit)",
     "data-volume-controlled condition",
-    "development dataset",
     "dialogue-level state recognition (EPR-S)",
     "direct speech",
     "expert ratings ground truth (Annotator 1)",
@@ -366,10 +169,10 @@
     "zero-shot prompting"
   ],
   "provenance": {
-    "generated": "2026-10-11T10:24:29.345540+00:00",
+    "generated": "2026-10-11T14:16:40.448173+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:20eb574e38ce8f2b4663644679f2646d61c751d73f008d7ef98c576e10d2fea0",
-    "base_digest": "sha256:dfd81561d633456edbb85e607be7ca034328d9716fe31330d0f8751e2dde0630"
+    "prompt_hash": "sha256:d30f46189ebe8376727bdb95c57c1140325fc2304f27a36885a90f696c3f0a20",
+    "base_digest": "sha256:2a3d158c3585d708708502856083d4091d0b97f389bc64f41577660a7646b2c3"
   }
 }

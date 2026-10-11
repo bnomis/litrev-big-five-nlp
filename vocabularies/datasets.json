@@ -332,7 +332,12 @@
       "Twitter dataset (new)",
       "Twitter Personality Dataset",
       "Twitter self-report dataset (this study)",
-      "Twitter survey dataset"
+      "Twitter survey dataset",
+      "Twitter #SocialNetworks dataset",
+      "Twitter (Sumner et al. 2012 new corpus)",
+      "Twitter (manually collected, extended from Adi et al. and Ong et al.)",
+      "Twitter county-level corpus 2012-2014 (10% random sample)",
+      "X (Twitter) tweets dataset"
     ],
     "WASSA 2022": [
       "WASSA 2022",

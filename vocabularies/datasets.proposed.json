@@ -3,21 +3,21 @@
     "Essays": [
       "long essays"
     ],
-    "WASSA 2022": [
-      "WASSA Shared Task 2022 Dataset"
-    ],
-    "WASSA 2024 Track 4": [
-      "Track 4 dataset"
+    "Twitter": [
+      "Twitter #SocialNetworks dataset",
+      "Twitter (Sumner et al. 2012 new corpus)",
+      "Twitter (manually collected, extended from Adi et al. and Ong et al.)",
+      "Twitter county-level corpus 2012-2014 (10% random sample)",
+      "X (Twitter) tweets dataset"
     ],
     "myPersonality": [
       "Private/ myPersonality"
     ]
   },
   "rationale": {
-    "Essays": "Refers to the standard long essays personality dataset known as Essays.",
-    "WASSA 2022": "This is the dataset name for the WASSA 2022 shared task.",
-    "WASSA 2024 Track 4": "Refers to the Track 4 dataset of WASSA 2024.",
-    "myPersonality": "Explicitly references the myPersonality dataset."
+    "Essays": "Long essays refer to the same essay corpus concept.",
+    "Twitter": "All refer to Twitter-based datasets.",
+    "myPersonality": "Refers to myPersonality dataset."
   },
   "unassigned": [
     "AMT Psychometric Survey Data (Directed/Undirected Responses)",
@@ -50,13 +50,10 @@
     "GitHub pull-request/commit trace dataset (reconstructed for Iyer et al. replication)",
     "IPIP-NEO-300",
     "ISEAR",
-    "Individual Text Corpora (ICs)",
-    "Individual text corpora (ICs) from Google search histories",
     "Interview dataset of 555 U.S. adults (518 with complete BFI-10)",
     "Ironic Corpus",
     "JIRA (Ortu et al.)",
     "LLM Emotion",
-    "MBTI",
     "MELD",
     "MUStARD",
     "Movie Script",
@@ -83,8 +80,6 @@
     "Produced Text",
     "Prolific speech and personality dataset (new)",
     "Public figure personality perception dataset (new)",
-    "Real-World Interview",
-    "Real-world semi-structured interview dataset",
     "Reddit Fiction Dataset",
     "Reddit Founders Dataset (new)",
     "Reddit News Dataset",
@@ -99,8 +94,6 @@
     "Social Media Text",
     "StackOverflow Java Lib (Lin et al.)",
     "StackOverflow Sentiments (Senti4SD, Calefato et al.)",
-    "Suicide and Depression (Reddit)",
-    "Suicide and depression dataset (Reddit, SuicideWatch/depression/teenagers subreddits)",
     "TEC",
     "TED English-French (IWSLT 2014, gender-annotated)",
     "TED61 en (matched subset of TED English-French)",
@@ -110,26 +103,20 @@
     "Task-pipeline dialogue corpus (new)",
     "Text Emotion",
     "Turkish Texts",
-    "Twitter #SocialNetworks dataset",
-    "Twitter (Sumner et al. 2012 new corpus)",
-    "Twitter (manually collected, extended from Adi et al. and Ong et al.)",
-    "Twitter county-level corpus 2012-2014 (10% random sample)",
     "Twitter+Instagram (new)",
     "UM Corpus",
     "Undirected Responses",
     "United States Congressional Records (Congress)",
     "Unnamed corpus (new)",
-    "X (Twitter) tweets dataset",
-    "YouTube vlogs",
     "YourMorals",
     "personality dataset",
     "real-world data"
   ],
   "provenance": {
-    "generated": "2026-10-11T10:24:29.339199+00:00",
+    "generated": "2026-10-11T14:16:40.443737+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:1432a46913a4a3e5b248c3c114724108227091ec840142fa5a4d2378719ed6a6",
-    "base_digest": "sha256:2922a3fcea00fb948ac608afd60f1707b9e7223f12c2f4cd5ed535a9cdda4939"
+    "prompt_hash": "sha256:ebcf88aeaf03c67ce274b3b998db806b07c54156e437e8a8d05df78cadda5927",
+    "base_digest": "sha256:bbb8549a01c24d4bf863ffaeb2ac48e2683e9412201ea539d1b158d7093eab2b"
   }
 }
