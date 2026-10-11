@@ -664,6 +664,8 @@ config: dict[str, typing.Any] = {
                     'When the paper prints the same result in more than one place (a column of a second table that '
                     'repeats the first, or a figure restated in the text), give it once, from the first table that '
                     'reports it. '
+                    'Take rows only from the paper\'s results tables and results section, never from its '
+                    'introduction, related work or discussion, where a number is restated rather than reported. '
                     'Do not compute numbers the paper does not state.'
                 ),
                 'columns': {
@@ -713,10 +715,39 @@ config: dict[str, typing.Any] = {
                         'choices': ['O', 'C', 'E', 'A', 'N', 'average'],
                         'description': 'The Big Five trait the number is for; average when the paper reports one figure over the five traits. Never empty: a result with no trait is not a row.',
                     },
+                    # precision, recall, r2, mse and spearman added 2026-10-11,
+                    # with metric_name: 2349 rows in 51 papers were `other`,
+                    # about 770 of them naming one of these in their quote
+                    # and 1579 naming nothing a reader could group by.
                     'metric': {
                         'type': 'enum',
-                        'choices': ['accuracy', 'f1_macro', 'f1_weighted', 'f1', 'auc', 'pearson_r', 'rmse', 'mae', 'other'],
-                        'description': 'The metric. Use f1 when the paper does not say how F1 is averaged.',
+                        'choices': [
+                            'accuracy',
+                            'f1_macro',
+                            'f1_weighted',
+                            'f1',
+                            'precision',
+                            'recall',
+                            'auc',
+                            'pearson_r',
+                            'spearman',
+                            'r2',
+                            'rmse',
+                            'mse',
+                            'mae',
+                            'other',
+                        ],
+                        'description': (
+                            'The metric. Use f1 when the paper does not say how F1 is averaged. Use other only for a '
+                            'metric none of these names, and give its name in metric_name.'
+                        ),
+                    },
+                    'metric_name': {
+                        'type': 'str',
+                        'description': (
+                            'Empty unless metric is other: then the metric\'s name as the paper prints it (for example '
+                            '"Hamming loss", "Cohen\'s kappa").'
+                        ),
                     },
                     'score': {
                         'type': 'float',
@@ -735,7 +766,7 @@ config: dict[str, typing.Any] = {
                         'choices': ['proportion', 'percent'],
                         'description': (
                             'How score is printed, for a metric that runs from 0 to 1 and can be given as a '
-                            'percentage (accuracy, any F1, AUC, and such a metric under other): proportion when the '
+                            'percentage (accuracy, any F1, precision, recall, AUC, and such a metric under other): proportion when the '
                             'paper prints it between 0 and 1 (0.68), percent when between 0 and 100 (68.0 or 68%). '
                             'Take it from how the table or sentence the number comes from prints its numbers, not '
                             'from what is usual for the metric. Empty for a correlation, an error such as rmse or '
@@ -777,10 +808,11 @@ config: dict[str, typing.Any] = {
         # 68.0, sometimes both in one paper, and `scale` records which.
         # `other` is left out: it holds unbounded metrics too, and its
         # scale cell is not trustworthy enough to multiply by 100.
+        # precision and recall joined 2026-10-11 with the metric enum.
         'scales': {
             'results.score': {
                 'scale': 'scale',
-                'where': {'metric': ['accuracy', 'f1', 'f1_macro', 'f1_weighted', 'auc']},
+                'where': {'metric': ['accuracy', 'f1', 'f1_macro', 'f1_weighted', 'precision', 'recall', 'auc']},
                 'to': 'percent',
             },
         },
