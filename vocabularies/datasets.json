@@ -166,6 +166,9 @@
       "HiTOP",
       "HiTOP-Segments (HiTOP)"
     ],
+    "Individual Text Corpora (ICs)": [
+      "Individual text corpora (ICs) from Google search histories"
+    ],
     "Indonesian Twitter Personality Dataset": [
       "Indonesian Twitter dataset",
       "Indonesian Twitter Personality Dataset",
@@ -183,7 +186,8 @@
       "MBTI (Kaggle, PersonalityCafe forum)",
       "MBTI (Personality Café / Kaggle)",
       "MBTI Kaggle",
-      "Twitter-MBTI"
+      "Twitter-MBTI",
+      "MBTI"
     ],
     "LinkedIn profiles": [
       "LinkedIn profiles",
@@ -273,6 +277,9 @@
       "PersonaLLM",
       "PersonaLLM dataset"
     ],
+    "Real-World Interview": [
+      "Real-world semi-structured interview dataset"
+    ],
     "RealPersonaChat": [
       "RealPersonaChat",
       "RealPersonaChat (dialogue)",
@@ -310,6 +317,9 @@
       "Story2Personality",
       "Story2Personality (Big Five)"
     ],
+    "Suicide and Depression (Reddit)": [
+      "Suicide and depression dataset (Reddit, SuicideWatch/depression/teenagers subreddits)"
+    ],
     "TB5I": [
       "TB5I"
     ],
@@ -328,7 +338,8 @@
       "WASSA 2022",
       "WASSA 2022 Shared Task Dataset",
       "WASSA 2022 shared task dataset (extension of Buechel et al. 2018 empathic reactions corpus)",
-      "WASSA-2022"
+      "WASSA-2022",
+      "WASSA Shared Task 2022 Dataset"
     ],
     "WASSA 2023": [
       "WASSA 2023",
@@ -339,7 +350,8 @@
       "WASSA-2023 Shared Task Empathic Conversations dataset (essay-level, used for Track4-PER personality prediction)"
     ],
     "WASSA 2024 Track 4": [
-      "WASSA 2024 Track 4 PER dataset"
+      "WASSA 2024 Track 4 PER dataset",
+      "Track 4 dataset"
     ],
     "Weibo": [
       "Sina Weibo",
@@ -369,7 +381,8 @@
       "YouTube vlogs (IDIAP corpus)",
       "YouTube vlogs (IDIAP)",
       "YouTube Personality",
-      "YouTube vloggers"
+      "YouTube vloggers",
+      "YouTube vlogs"
     ]
   }
 }

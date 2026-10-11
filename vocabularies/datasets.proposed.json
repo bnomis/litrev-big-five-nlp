@@ -1,63 +1,23 @@
 {
   "entries": {
-    "ASF": [
-      "ASF developer email corpus"
-    ],
-    "Backstage": [
-      "Backstage"
-    ],
-    "Cornell Movie-Dialogs Corpus": [
-      "Cornell Movie-Dialogs Corpus",
-      "Movie-Dialogs Corpus"
-    ],
-    "D_HR": [
-      "D_HR",
-      "D_HR (small high-reliability dataset)"
-    ],
-    "D_LR": [
-      "D_LR",
-      "D_LR (large low-reliability dataset)"
-    ],
-    "Fisher dataset": [
-      "Fisher"
-    ],
-    "FriendFeed": [
-      "FriendFeed"
-    ],
-    "Indonesian Twitter Personality Dataset": [
-      "Twitter (Indonesian dataset)"
-    ],
-    "MaSaC": [
-      "MaSaC"
-    ],
-    "PAN-AP-2015": [
-      "PAN 2015"
+    "Essays": [
+      "long essays"
     ],
     "WASSA 2022": [
-      "WASSA-2022"
+      "WASSA Shared Task 2022 Dataset"
     ],
     "WASSA 2024 Track 4": [
-      "WASSA 2024 Track 4",
-      "WASSA 2024 Track 4 PER dataset"
+      "Track 4 dataset"
     ],
-    "YouTube personality dataset": [
-      "YouTube Personality"
+    "myPersonality": [
+      "Private/ myPersonality"
     ]
   },
   "rationale": {
-    "ASF": "Refers to the Apache Software Foundation developer email corpus, matching ASF canonical label.",
-    "Backstage": "Single consistent dataset name used across two studies.",
-    "Cornell Movie-Dialogs Corpus": "Both refer to the same Cornell Movie-Dialogs Corpus.",
-    "D_HR": "Both refer to the small high-reliability dataset labeled D_HR.",
-    "D_LR": "Both refer to the large low-reliability dataset labeled D_LR.",
-    "Fisher dataset": "Shortened name for the Fisher dataset.",
-    "FriendFeed": "Single consistent dataset name used across two studies.",
-    "Indonesian Twitter Personality Dataset": "Refers to the Indonesian Twitter personality dataset.",
-    "MaSaC": "Single consistent dataset name used across two studies.",
-    "PAN-AP-2015": "Abbreviated form of PAN-AP-2015.",
-    "WASSA 2022": "Alternate formatting of WASSA 2022.",
-    "WASSA 2024 Track 4": "Both refer to the WASSA 2024 Track 4 personality dataset.",
-    "YouTube personality dataset": "Same dataset with slightly different naming."
+    "Essays": "Refers to the standard long essays personality dataset known as Essays.",
+    "WASSA 2022": "This is the dataset name for the WASSA 2022 shared task.",
+    "WASSA 2024 Track 4": "Refers to the Track 4 dataset of WASSA 2024.",
+    "myPersonality": "Explicitly references the myPersonality dataset."
   },
   "unassigned": [
     "AMT Psychometric Survey Data (Directed/Undirected Responses)",
@@ -67,24 +27,20 @@
     "Blog corpus (Nowson & Oberlander)",
     "Blog posts from WordPress-hosted sites",
     "CMU-MOSEI",
-    "Chinese dataset",
     "Commonsense reasoning survey dataset",
     "Counseling dialogues corpus (new)",
     "Crunchbase leaders dataset (this study)",
     "Deceptive speech corpus (fake resume paradigm)",
     "Directed Responses",
     "Emotions Dataset",
-    "English dataset",
-    "F3",
     "Facebook Wall Posts Dataset (new)",
     "Facebook ego-network corpus (new)",
     "Facebook posts + IPIP Big5 questionnaire responses (new)",
     "Facebook status updates",
     "Fiction",
     "Fictional character personality dataset (from Personality Databank, characters from novels such as Harry Potter, Game of Thrones, Lord of the Rings, Star Wars, Twilight, classical literature)",
-    "Flickr Pictures",
     "GPT-3 generated dialogues (new)",
-    "Generated Data",
+    "Generated data",
     "Geotagged social media dataset (Twitter, Instagram, Flickr, iNaturalist)",
     "Gerrit (SentiCR, Ahmed et al.)",
     "GitHub",
@@ -92,8 +48,6 @@
     "GitHub communications data (GHTorrent, top 3% projects)",
     "GitHub pull request comments (personality corpus)",
     "GitHub pull-request/commit trace dataset (reconstructed for Iyer et al. replication)",
-    "Global 5",
-    "Hiring interviews",
     "IPIP-NEO-300",
     "ISEAR",
     "Individual Text Corpora (ICs)",
@@ -101,25 +55,22 @@
     "Interview dataset of 555 U.S. adults (518 with complete BFI-10)",
     "Ironic Corpus",
     "JIRA (Ortu et al.)",
-    "L",
     "LLM Emotion",
-    "LinkedIn",
     "MBTI",
     "MELD",
     "MUStARD",
     "Movie Script",
     "Multi-PR GPA User Study Corpus (new)",
-    "Music preferences",
     "New conversational corpus (LLM-guided personality interviews)",
     "Newly collected chatbot-conversation corpus (this study)",
     "News",
     "Nilsson et al. (2024) EMA dataset (service industry alcohol-use study)",
     "Open Source Shakespeare (OSS)",
-    "Open-domain",
     "Open-domain dialogue corpus (new)",
     "OpenPsychometrics IPIP Big Five Survey",
     "Ordinary World novel dialogues (Shaoping Sun and Shaoan Sun)",
     "Original Corpus (OC)",
+    "Ours",
     "Ours (BF-CC bilingual synthetic dialogue dataset)",
     "PIGA-augmented Essays (LLM-translated, personality-informed)",
     "PIGA-augmented Kaggle (LLM-translated, personality-informed)",
@@ -129,11 +80,11 @@
     "Participant-author's personal 16-year email archive",
     "Personality",
     "Private",
+    "Produced Text",
     "Prolific speech and personality dataset (new)",
     "Public figure personality perception dataset (new)",
     "Real-World Interview",
     "Real-world semi-structured interview dataset",
-    "Reddit (produced text)",
     "Reddit Fiction Dataset",
     "Reddit Founders Dataset (new)",
     "Reddit News Dataset",
@@ -146,10 +97,8 @@
     "Sarcasm Dataset",
     "Semi-structured interview dataset",
     "Social Media Text",
-    "Spending records",
     "StackOverflow Java Lib (Lin et al.)",
     "StackOverflow Sentiments (Senti4SD, Calefato et al.)",
-    "Stream-of-consciousness writing",
     "Suicide and Depression (Reddit)",
     "Suicide and depression dataset (Reddit, SuicideWatch/depression/teenagers subreddits)",
     "TEC",
@@ -158,7 +107,6 @@
     "TED61 fr-en (TEDx France)",
     "TOGA-augmented Essays and Kaggle (translation-only control)",
     "Task-E2E dialogue corpus (new)",
-    "Task-pipeline",
     "Task-pipeline dialogue corpus (new)",
     "Text Emotion",
     "Turkish Texts",
@@ -172,16 +120,16 @@
     "United States Congressional Records (Congress)",
     "Unnamed corpus (new)",
     "X (Twitter) tweets dataset",
-    "YouTube vloggers",
+    "YouTube vlogs",
     "YourMorals",
-    "counseling dialogues",
-    "personality dataset"
+    "personality dataset",
+    "real-world data"
   ],
   "provenance": {
-    "generated": "2026-10-10T20:17:34.238570+00:00",
+    "generated": "2026-10-11T10:24:29.339199+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:1dcae6ed1f4b2a097c40d1099d9085d59138eaff1f89205f35024a49823b43b8",
-    "base_digest": "sha256:ba93356bf2629f444c34eab582c9d0ad41f9a80c35bd9c2dd40d3dd671b94c81"
+    "prompt_hash": "sha256:1432a46913a4a3e5b248c3c114724108227091ec840142fa5a4d2378719ed6a6",
+    "base_digest": "sha256:2922a3fcea00fb948ac608afd60f1707b9e7223f12c2f4cd5ed535a9cdda4939"
   }
 }

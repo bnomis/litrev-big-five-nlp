@@ -2,53 +2,152 @@
   "entries": {
     "10-fold cross-validation": [],
     "5-fold cross-validation": [],
-    "data type: Account Credentials": [],
-    "data type: Age": [],
-    "data type: Criminal Records": [],
-    "data type: Ethnicity and Citizenship": [],
-    "data type: Family Life and Relation.": [],
-    "data type: Gender": [],
-    "data type: Job and Education": [],
-    "data type: Lifestyle and Habits": [],
-    "data type: Location and Mobility": [],
-    "data type: Mental Health": [],
-    "data type: Mental State, Pers., Mood": [],
-    "data type: Personal Identifiers": [],
-    "data type: Physical Health Diagnosis": [],
-    "data type: Physical Traits": [],
-    "data type: Political Views": [],
-    "data type: Recreational Consumption": [],
-    "data type: Religion": [],
-    "data type: Sex. and Dating Activities": [],
-    "data type: Sexual orientation": [],
-    "data type: Wealth Details Salary": [],
-    "development set": [],
-    "English": [],
-    "English, 5-fold cross-validation": [],
-    "Italian": [],
-    "Italian, 5-fold cross-validation": [],
-    "Spanish": [],
-    "Spanish, 5-fold cross-validation": [],
-    "use case: Arg. or Summary Gen.": [],
-    "use case: Asking About the Model": [],
-    "use case: Computer Programming": [],
-    "use case: Cooking and Recipes": [],
-    "use case: Creative Ideation": [],
-    "use case: Data Analysis": [],
-    "use case: Edit/Critique Provided Text": [],
-    "use case: Games and Role Play": [],
-    "use case: Gen./Retrieve Other Media": [],
-    "use case: Greetings and Chitchat": [],
-    "use case: Health/Fit./Beauty/S.-Care": [],
-    "use case: How-To Advice": [],
-    "use case: Mathematical Calculation": [],
-    "use case: Personal Writing or Comm.": [],
-    "use case: Purchasable Products": [],
-    "use case: Relation. and Pers. Reflect.": [],
-    "use case: Specific Info": [],
-    "use case: Translation": [],
-    "use case: Tutoring or Teaching": [],
-    "use case: Unclear": [],
-    "use case: Write Fiction": []
+    "data type: Account Credentials": [
+      "Account Credentials"
+    ],
+    "data type: Age": [
+      "Age"
+    ],
+    "data type: Criminal Records": [
+      "Criminal Records"
+    ],
+    "data type: Ethnicity and Citizenship": [
+      "Ethnicity and Citizenship"
+    ],
+    "data type: Family Life and Relation.": [
+      "Family Life and Relation."
+    ],
+    "data type: Gender": [
+      "Gender"
+    ],
+    "data type: Job and Education": [
+      "Job and Education"
+    ],
+    "data type: Lifestyle and Habits": [
+      "Lifestyle and Habits"
+    ],
+    "data type: Location and Mobility": [
+      "Location and Mobility"
+    ],
+    "data type: Mental Health": [
+      "Mental Health"
+    ],
+    "data type: Mental State, Pers., Mood": [
+      "Mental State, Pers., Mood"
+    ],
+    "data type: Personal Identifiers": [
+      "Personal Identifiers"
+    ],
+    "data type: Physical Health Diagnosis": [
+      "Physical Health Diagnosis"
+    ],
+    "data type: Physical Traits": [
+      "Physical Traits"
+    ],
+    "data type: Political Views": [
+      "Political Views"
+    ],
+    "data type: Recreational Consumption": [
+      "Recreational Consumption"
+    ],
+    "data type: Religion": [
+      "Religion"
+    ],
+    "data type: Sex. and Dating Activities": [
+      "Sex. and Dating Activities"
+    ],
+    "data type: Sexual orientation": [
+      "Sexual orientation"
+    ],
+    "data type: Wealth Details Salary": [
+      "Wealth Details Salary"
+    ],
+    "development set": [
+      "development dataset"
+    ],
+    "English": [
+      "English data",
+      "English subset"
+    ],
+    "English, 5-fold cross-validation": [
+      "English subset, 5-fold cross-validation"
+    ],
+    "Italian": [
+      "Italian regression",
+      "Italian subset"
+    ],
+    "Italian, 5-fold cross-validation": [
+      "Italian subset, 5-fold cross-validation"
+    ],
+    "Spanish": [
+      "Spanish regression",
+      "Spanish subset"
+    ],
+    "Spanish, 5-fold cross-validation": [
+      "Spanish subset, 5-fold cross-validation"
+    ],
+    "use case: Arg. or Summary Gen.": [
+      "Arg. or Summary Gen."
+    ],
+    "use case: Asking About the Model": [
+      "Asking About the Model"
+    ],
+    "use case: Computer Programming": [
+      "Computer Programming"
+    ],
+    "use case: Cooking and Recipes": [
+      "Cooking and Recipes"
+    ],
+    "use case: Creative Ideation": [
+      "Creative Ideation"
+    ],
+    "use case: Data Analysis": [
+      "Data Analysis"
+    ],
+    "use case: Edit/Critique Provided Text": [
+      "Edit/Critique Provided Text"
+    ],
+    "use case: Games and Role Play": [
+      "Games and Role Play"
+    ],
+    "use case: Gen./Retrieve Other Media": [
+      "Gen./Retrieve Other Media"
+    ],
+    "use case: Greetings and Chitchat": [
+      "Greetings and Chitchat"
+    ],
+    "use case: Health/Fit./Beauty/S.-Care": [
+      "Health/Fit./Beauty/S.-Care"
+    ],
+    "use case: How-To Advice": [
+      "How-To Advice"
+    ],
+    "use case: Mathematical Calculation": [
+      "Mathematical Calculation"
+    ],
+    "use case: Personal Writing or Comm.": [
+      "Personal Writing or Comm."
+    ],
+    "use case: Purchasable Products": [
+      "Purchasable Products"
+    ],
+    "use case: Relation. and Pers. Reflect.": [
+      "Relation. and Pers. Reflect."
+    ],
+    "use case: Specific Info": [
+      "Specific Info"
+    ],
+    "use case: Translation": [
+      "Translation"
+    ],
+    "use case: Tutoring or Teaching": [
+      "Tutoring or Teaching"
+    ],
+    "use case: Unclear": [
+      "Unclear"
+    ],
+    "use case: Write Fiction": [
+      "Write Fiction"
+    ]
   }
 }

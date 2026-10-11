@@ -1,381 +1,375 @@
 {
   "entries": {
     "10-fold cross-validation": [
-      "10-fold cross-validation"
-    ],
-    "5-fold cross-validation": [
-      "5-fold cross-validation"
-    ],
-    "70:30 train-test split": [
-      "70:30 split, preprocessing scenario 1",
-      "70:30 split, preprocessing scenario 2",
-      "70:30 train-test split"
-    ],
-    "80:20 train-test split": [
-      "80:20 split, preprocessing scenario 1",
-      "80:20 split, preprocessing scenario 2",
-      "80:20 train-test split"
+      "English subset, 10-fold cross-validation",
+      "English subset, tweet-level, 10-fold cross-validation",
+      "Italian subset, 10-fold cross-validation",
+      "Italian subset, tweet-level, 10-fold cross-validation",
+      "Spanish subset, 10-fold cross-validation",
+      "Spanish subset, tweet-level, 10-fold cross-validation"
     ],
     "English": [
-      "English"
-    ],
-    "English, 10-fold cross-validation": [
-      "English, 10-fold cross-validation",
-      "English, tweet-level, 10-fold cross-validation"
+      "English data",
+      "English subset"
     ],
     "English, 5-fold cross-validation": [
-      "English, 5-fold cross-validation"
-    ],
-    "HIGH class": [
-      "HIGH class",
-      "High class recall"
+      "English subset, 5-fold cross-validation"
     ],
     "Italian": [
-      "Italian"
-    ],
-    "Italian, 10-fold cross-validation": [
-      "Italian, 10-fold cross-validation",
-      "Italian, tweet-level, 10-fold cross-validation"
+      "Italian regression",
+      "Italian subset"
     ],
     "Italian, 5-fold cross-validation": [
-      "Italian, 5-fold cross-validation"
-    ],
-    "LOW class": [
-      "LOW class",
-      "Low class recall"
+      "Italian subset, 5-fold cross-validation"
     ],
     "Spanish": [
-      "Spanish"
-    ],
-    "Spanish, 10-fold cross-validation": [
-      "Spanish, 10-fold cross-validation",
-      "Spanish, tweet-level, 10-fold cross-validation"
+      "Spanish regression",
+      "Spanish subset"
     ],
     "Spanish, 5-fold cross-validation": [
-      "Spanish, 5-fold cross-validation"
+      "Spanish subset, 5-fold cross-validation"
     ],
     "data type: Account Credentials": [
-      "data type: Account Credentials"
+      "Account Credentials"
     ],
     "data type: Age": [
-      "data type: Age"
+      "Age"
     ],
     "data type: Criminal Records": [
-      "data type: Criminal Records"
+      "Criminal Records"
     ],
     "data type: Ethnicity and Citizenship": [
-      "data type: Ethnicity and Citizenship"
+      "Ethnicity and Citizenship"
     ],
     "data type: Family Life and Relation.": [
-      "data type: Family Life and Relation."
+      "Family Life and Relation."
     ],
     "data type: Gender": [
-      "data type: Gender"
+      "Gender"
     ],
     "data type: Job and Education": [
-      "data type: Job and Education"
+      "Job and Education"
     ],
     "data type: Lifestyle and Habits": [
-      "data type: Lifestyle and Habits"
+      "Lifestyle and Habits"
     ],
     "data type: Location and Mobility": [
-      "data type: Location and Mobility"
+      "Location and Mobility"
     ],
     "data type: Mental Health": [
-      "data type: Mental Health"
+      "Mental Health"
     ],
     "data type: Mental State, Pers., Mood": [
-      "data type: Mental State, Pers., Mood"
+      "Mental State, Pers., Mood"
     ],
     "data type: Personal Identifiers": [
-      "data type: Personal Identifiers"
+      "Personal Identifiers"
     ],
     "data type: Physical Health Diagnosis": [
-      "data type: Physical Health Diagnosis"
+      "Physical Health Diagnosis"
     ],
     "data type: Physical Traits": [
-      "data type: Physical Traits"
+      "Physical Traits"
     ],
     "data type: Political Views": [
-      "data type: Political Views"
+      "Political Views"
     ],
     "data type: Recreational Consumption": [
-      "data type: Recreational Consumption"
+      "Recreational Consumption"
     ],
     "data type: Religion": [
-      "data type: Religion"
+      "Religion"
     ],
     "data type: Sex. and Dating Activities": [
-      "data type: Sex. and Dating Activities"
+      "Sex. and Dating Activities"
     ],
     "data type: Sexual orientation": [
-      "data type: Sexual orientation"
+      "Sexual orientation"
     ],
     "data type: Wealth Details Salary": [
-      "data type: Wealth Details Salary"
-    ],
-    "development set": [
-      "development set"
+      "Wealth Details Salary"
     ],
     "use case: Arg. or Summary Gen.": [
-      "use case: Arg. or Summary Gen."
+      "Arg. or Summary Gen."
     ],
     "use case: Asking About the Model": [
-      "use case: Asking About the Model"
+      "Asking About the Model"
     ],
     "use case: Computer Programming": [
-      "use case: Computer Programming"
+      "Computer Programming"
     ],
     "use case: Cooking and Recipes": [
-      "use case: Cooking and Recipes"
+      "Cooking and Recipes"
     ],
     "use case: Creative Ideation": [
-      "use case: Creative Ideation"
+      "Creative Ideation"
     ],
     "use case: Data Analysis": [
-      "use case: Data Analysis"
+      "Data Analysis"
     ],
     "use case: Edit/Critique Provided Text": [
-      "use case: Edit/Critique Provided Text"
+      "Edit/Critique Provided Text"
     ],
     "use case: Games and Role Play": [
-      "use case: Games and Role Play"
+      "Games and Role Play"
     ],
     "use case: Gen./Retrieve Other Media": [
-      "use case: Gen./Retrieve Other Media"
+      "Gen./Retrieve Other Media"
     ],
     "use case: Greetings and Chitchat": [
-      "use case: Greetings and Chitchat"
+      "Greetings and Chitchat"
     ],
     "use case: Health/Fit./Beauty/S.-Care": [
-      "use case: Health/Fit./Beauty/S.-Care"
+      "Health/Fit./Beauty/S.-Care"
     ],
     "use case: How-To Advice": [
-      "use case: How-To Advice"
+      "How-To Advice"
     ],
     "use case: Mathematical Calculation": [
-      "use case: Mathematical Calculation"
+      "Mathematical Calculation"
     ],
     "use case: Personal Writing or Comm.": [
-      "use case: Personal Writing or Comm."
+      "Personal Writing or Comm."
     ],
     "use case: Purchasable Products": [
-      "use case: Purchasable Products"
+      "Purchasable Products"
     ],
     "use case: Relation. and Pers. Reflect.": [
-      "use case: Relation. and Pers. Reflect."
+      "Relation. and Pers. Reflect."
     ],
     "use case: Specific Info": [
-      "use case: Specific Info"
+      "Specific Info"
     ],
     "use case: Translation": [
-      "use case: Translation"
+      "Translation"
     ],
     "use case: Tutoring or Teaching": [
-      "use case: Tutoring or Teaching"
+      "Tutoring or Teaching"
     ],
     "use case: Unclear": [
-      "use case: Unclear"
+      "Unclear"
     ],
     "use case: Write Fiction": [
-      "use case: Write Fiction"
+      "Write Fiction"
     ]
   },
   "rationale": {
-    "10-fold cross-validation": "Standard CV method.",
-    "5-fold cross-validation": "Standard CV method.",
-    "70:30 train-test split": "Same 70:30 split with different preprocessing variants.",
-    "80:20 train-test split": "Same 80:20 split with different preprocessing variants.",
-    "English": "Language label.",
-    "English, 10-fold cross-validation": "English data with 10-fold CV variants.",
-    "English, 5-fold cross-validation": "English data with 5-fold CV.",
-    "HIGH class": "Same class label referenced directly or via its recall metric.",
-    "Italian": "Language label.",
-    "Italian, 10-fold cross-validation": "Italian data with 10-fold CV variants.",
-    "Italian, 5-fold cross-validation": "Italian data with 5-fold CV.",
-    "LOW class": "Same class label referenced directly or via its recall metric.",
-    "Spanish": "Language label.",
-    "Spanish, 10-fold cross-validation": "Spanish data with 10-fold CV variants.",
-    "Spanish, 5-fold cross-validation": "Spanish data with 5-fold CV.",
-    "data type: Account Credentials": "Data type category.",
-    "data type: Age": "Data type category.",
-    "data type: Criminal Records": "Data type category.",
-    "data type: Ethnicity and Citizenship": "Data type category.",
-    "data type: Family Life and Relation.": "Data type category.",
-    "data type: Gender": "Data type category.",
-    "data type: Job and Education": "Data type category.",
-    "data type: Lifestyle and Habits": "Data type category.",
-    "data type: Location and Mobility": "Data type category.",
-    "data type: Mental Health": "Data type category.",
-    "data type: Mental State, Pers., Mood": "Data type category.",
-    "data type: Personal Identifiers": "Data type category.",
-    "data type: Physical Health Diagnosis": "Data type category.",
-    "data type: Physical Traits": "Data type category.",
-    "data type: Political Views": "Data type category.",
-    "data type: Recreational Consumption": "Data type category.",
-    "data type: Religion": "Data type category.",
-    "data type: Sex. and Dating Activities": "Data type category.",
-    "data type: Sexual orientation": "Data type category.",
-    "data type: Wealth Details Salary": "Data type category.",
-    "development set": "Standard dev set term, 2 studies.",
-    "use case: Arg. or Summary Gen.": "Use case category.",
-    "use case: Asking About the Model": "Use case category.",
-    "use case: Computer Programming": "Use case category.",
-    "use case: Cooking and Recipes": "Use case category.",
-    "use case: Creative Ideation": "Use case category.",
-    "use case: Data Analysis": "Use case category.",
-    "use case: Edit/Critique Provided Text": "Use case category.",
-    "use case: Games and Role Play": "Use case category.",
-    "use case: Gen./Retrieve Other Media": "Use case category.",
-    "use case: Greetings and Chitchat": "Use case category.",
-    "use case: Health/Fit./Beauty/S.-Care": "Use case category.",
-    "use case: How-To Advice": "Use case category.",
-    "use case: Mathematical Calculation": "Use case category.",
-    "use case: Personal Writing or Comm.": "Use case category.",
-    "use case: Purchasable Products": "Use case category.",
-    "use case: Relation. and Pers. Reflect.": "Use case category.",
-    "use case: Specific Info": "Use case category.",
-    "use case: Translation": "Use case category.",
-    "use case: Tutoring or Teaching": "Use case category.",
-    "use case: Unclear": "Use case category.",
-    "use case: Write Fiction": "Use case category."
+    "10-fold cross-validation": "All use 10-fold cross-validation on language subsets, differing only by language.",
+    "English": "Plain references to the English language subset/data.",
+    "English, 5-fold cross-validation": "English subset with 5-fold cross-validation matches canonical combined label.",
+    "Italian": "Plain references to the Italian language subset.",
+    "Italian, 5-fold cross-validation": "Italian subset with 5-fold cross-validation matches canonical combined label.",
+    "Spanish": "Plain references to the Spanish language subset.",
+    "Spanish, 5-fold cross-validation": "Spanish subset with 5-fold cross-validation matches canonical combined label.",
+    "data type: Account Credentials": "Exact match to canonical data type label.",
+    "data type: Age": "Exact match to canonical data type label.",
+    "data type: Criminal Records": "Exact match to canonical data type label.",
+    "data type: Ethnicity and Citizenship": "Exact match to canonical data type label.",
+    "data type: Family Life and Relation.": "Exact match to canonical data type label.",
+    "data type: Gender": "Exact match to canonical data type label.",
+    "data type: Job and Education": "Exact match to canonical data type label.",
+    "data type: Lifestyle and Habits": "Exact match to canonical data type label.",
+    "data type: Location and Mobility": "Exact match to canonical data type label.",
+    "data type: Mental Health": "Exact match to canonical data type label.",
+    "data type: Mental State, Pers., Mood": "Exact match to canonical data type label.",
+    "data type: Personal Identifiers": "Exact match to canonical data type label.",
+    "data type: Physical Health Diagnosis": "Exact match to canonical data type label.",
+    "data type: Physical Traits": "Exact match to canonical data type label.",
+    "data type: Political Views": "Exact match to canonical data type label.",
+    "data type: Recreational Consumption": "Exact match to canonical data type label.",
+    "data type: Religion": "Exact match to canonical data type label.",
+    "data type: Sex. and Dating Activities": "Exact match to canonical data type label.",
+    "data type: Sexual orientation": "Exact match to canonical data type label.",
+    "data type: Wealth Details Salary": "Exact match to canonical data type label.",
+    "use case: Arg. or Summary Gen.": "Exact match to canonical use case label.",
+    "use case: Asking About the Model": "Exact match to canonical use case label.",
+    "use case: Computer Programming": "Exact match to canonical use case label.",
+    "use case: Cooking and Recipes": "Exact match to canonical use case label.",
+    "use case: Creative Ideation": "Exact match to canonical use case label.",
+    "use case: Data Analysis": "Exact match to canonical use case label.",
+    "use case: Edit/Critique Provided Text": "Exact match to canonical use case label.",
+    "use case: Games and Role Play": "Exact match to canonical use case label.",
+    "use case: Gen./Retrieve Other Media": "Exact match to canonical use case label.",
+    "use case: Greetings and Chitchat": "Exact match to canonical use case label.",
+    "use case: Health/Fit./Beauty/S.-Care": "Exact match to canonical use case label.",
+    "use case: How-To Advice": "Exact match to canonical use case label.",
+    "use case: Mathematical Calculation": "Exact match to canonical use case label.",
+    "use case: Personal Writing or Comm.": "Exact match to canonical use case label.",
+    "use case: Purchasable Products": "Exact match to canonical use case label.",
+    "use case: Relation. and Pers. Reflect.": "Exact match to canonical use case label.",
+    "use case: Specific Info": "Exact match to canonical use case label.",
+    "use case: Translation": "Exact match to canonical use case label.",
+    "use case: Tutoring or Teaching": "Exact match to canonical use case label.",
+    "use case: Unclear": "Exact match to canonical use case label.",
+    "use case: Write Fiction": "Exact match to canonical use case label."
   },
   "unassigned": [
-    "+50k augmented data",
-    "100-item subsample",
-    "20-item subsample",
-    "3-class classification (lmh)",
-    "3-class label resolution",
-    "3400 user subsample",
-    "60:40 train-test split",
+    "'High' class recall",
+    "'Low' class recall",
+    "10-fold cross-validation on NC using OC-derived language models; 3-class (low/medium/high) classification",
+    "10-fold cross-validation on NC using OC-derived language models; binary (high vs low) classification",
+    "100+ chats",
+    "100-item self-report subset",
+    "20-100 chats",
+    "20-item self-report subset",
+    "3-class classification",
+    "3400 user random subsample",
+    "70:30 split, preprocessing scenario 1",
+    "70:30 split, preprocessing scenario 2",
+    "80:20 split, preprocessing scenario 1",
+    "80:20 split, preprocessing scenario 2",
     "90% confidence interval",
     "90th percentile split",
     "99% confidence interval",
-    "AI-to-AI classification (per LLM)",
-    "Annotator 1 (expert ratings)",
-    "Annotator 2 (expert ratings)",
-    "Annotator 3 (expert ratings)",
-    "Annotator 4 (expert ratings)",
+    "< 20 chats",
+    "AI-to-AI classification",
+    "AO traits average",
+    "Activity facet",
+    "Aesthetics facet",
+    "Altruism facet",
+    "Anxiety facet",
+    "Assertiveness facet",
+    "Big Five traits (excluding AO)",
+    "Big Five traits average",
+    "Chinese data",
+    "Compliance facet",
     "Conversation user condition",
-    "Dutch",
-    "Dutch test translated into English",
-    "Google transcription (ASR)",
-    "Human-to-AI classification (per LLM)",
-    "Italian test translated into English",
-    "Kaldi transcription (ASR)",
-    "LAH representation",
-    "LH representation",
-    "LHNA representation",
-    "LHNASD representation",
-    "LLM-generated texts (aggregated across GPT3.5, Llama 2, Gemini and both prompts)",
+    "Depression facet",
+    "Dutch subset",
+    "Dutch test data translated into English",
+    "English mother tongue subset",
+    "F2P feature subset (excludes standard deviation and friend features)",
+    "F3 feature subset (FSS-selected features)",
+    "Global Five subset",
+    "HIGH class",
+    "Human-to-AI classification",
+    "Ideas facet",
+    "Italian test data translated into English",
+    "LIWC-based features (L)",
+    "LLM-generated texts",
+    "LO-Zero-shot CoT_D",
+    "LO-Zero-shot CoT_S",
+    "LO-Zero-shot CoT_W",
+    "LOW class",
     "Leave-One-Out Cross-Validation",
-    "Mini-IPIP questionnaire variant",
+    "Long (>3,500 words)",
+    "Medium (1,500-3,500 words)",
     "NEUTRAL class",
     "N_ta=100",
+    "N_ta=100, uniform pre-training size (N_pt=500)",
     "N_ta=500",
-    "PIGA augmentation",
-    "PPM1 preprocessing",
-    "PPM2 preprocessing",
-    "Spanish test translated into English",
-    "Sphinx transcription (ASR)",
-    "TIPI questionnaire variant",
-    "TOGA augmentation",
-    "Trivial-ZS",
+    "N_ta=500, uniform pre-training size (N_pt=500)",
+    "One-shot",
+    "Order facet",
+    "PsyCoT",
+    "Round 1",
+    "Rounds 1-2",
+    "Rounds 1-3",
+    "Rounds 1-4",
+    "Rounds 1-5",
+    "S1: LIWC features",
+    "S2: Demographic features",
+    "S3: TF-IDF features",
+    "S4: LIWC + Demographic features",
+    "S5 + FREG feature selection",
+    "S5 + LASSO feature selection",
+    "S5 + MI feature selection",
+    "S5 + RF feature selection",
+    "S5 + RFECV feature selection",
+    "S5: LIWC + Demographic + TF-IDF features",
+    "Self-discipline facet",
+    "Short (<1,500 words)",
+    "Spanish test data translated into English",
+    "Trivial-ZS (relevant text removed)",
     "Unconstrained user condition",
+    "Zero-shot",
+    "Zero-shot CoT",
     "actions",
-    "age and gender residualized",
-    "aggregated across temporal levels (dimension average)",
-    "artificially enriched testing data",
-    "augmented data without Zemberek preprocessing",
-    "author level (250 examples)",
-    "average across real-world datasets",
-    "binary classification test",
-    "binary label resolution",
-    "chat count: 100+",
-    "chat count: 20-100",
-    "chat count: <20",
-    "classification with four other trait ground-truth labels as additional features",
-    "combined across user conditions",
+    "artificially enriched",
+    "author level",
+    "balanced data",
+    "binary classification",
+    "c>=100 word count filter",
+    "c>=75 word count filter",
+    "chain-of-thought prompting",
+    "classifier trained on OC training set 1 (extreme H/L groups), tested on NC; binary classification",
+    "classifier trained on OC training set 2 (relaxed HH/LL groups), tested on NC; binary classification",
+    "classifier trained on OC training set 3 (median split HHH/LLL), tested on NC; binary classification",
+    "classifier trained on OC training set 5 (L/M/H groups), tested on NC; 3-class classification",
+    "classifier trained on OC training set 6 (LL/m/HH groups), tested on NC; 3-class classification",
     "complex prompt",
-    "confidence factor greater than 3",
-    "confidence values more than two",
+    "confidence > 2",
+    "confidence factor > 3",
     "controlling for likability and demographics",
-    "cross-corpus (trained on CXD)",
-    "cross-corpus (trained on myPersonality)",
+    "cross-corpus (trained on other corpus)",
     "cross-domain (model trained on Essays)",
     "cross-domain (model trained on Reddit)",
     "data-volume-controlled condition",
-    "description length \\u2265 100 words, outliers removed",
-    "description length \\u2265 75 words, outliers removed",
+    "development dataset",
+    "dialogue-level state recognition (EPR-S)",
     "direct speech",
-    "extreme class division",
-    "fairness analysis (demographic attribute prompting)",
-    "fine-tuned on essays dataset individually without data fusion",
+    "expert ratings ground truth (Annotator 1)",
+    "expert ratings ground truth (Annotator 2)",
+    "expert ratings ground truth (Annotator 3)",
+    "expert ratings ground truth (Annotator 4)",
+    "extremes subset (classes defined by mean \u00b1 standard deviation)",
     "fine-tuned on fused dataset",
-    "fine-tuned on myPersonality dataset individually without data fusion",
-    "five primary speakers",
-    "full dialogue (F) format",
+    "fine-tuned without data fusion",
+    "fluent subset",
+    "full context",
+    "full dialogue",
     "high extreme subset",
     "informant subsample (n=745)",
-    "internal assessment study",
-    "long transcripts (>3,500 words)",
     "low extreme subset",
-    "mean over 100 random-seed model fits, 10-fold CV",
-    "mean over 100 random-seed model fits, 5-fold CV",
-    "medium-length transcripts (1500-3,500 words)",
+    "medium input length (1000 words)",
     "monologue setting",
-    "monologue setting (+500k augmented data)",
-    "monologue setting (+500k augmented data, fixed \u03b2=0.5)",
-    "monologue setting (+500k augmented data, same-speaker fusion)",
-    "non-reverse-coded responses; question embeddings for known users",
-    "per-trait accuracy averaged across real-world datasets",
-    "personality state recognition (EPR-S task)",
+    "monologue setting, no augmentation",
+    "no augmentation",
+    "non-English mother tongue subset",
+    "non-fluent subset",
     "predicatives",
-    "question embeddings for known users",
-    "round 1",
-    "rounds 1-2 (cumulative)",
-    "rounds 1-3 (cumulative)",
-    "rounds 1-4 (cumulative)",
-    "rounds 1-5 (cumulative)",
+    "question embeddings only (new-question prediction)",
+    "question embeddings only, non-reverse-coded responses",
     "self-reports",
-    "short transcripts (<1,500 words)",
-    "significance test (average of 5 runs)",
-    "simple prompt",
-    "simulated multiclass (F1 product across dimensions)",
-    "single + context (S+C) format",
+    "short input (100 words)",
+    "significance test (5-run average)",
+    "single + context",
     "single-chat classification",
-    "single-turn dialogue variant",
-    "state-level aggregated predictions vs Rentfrow et al. 2013 ground truth",
+    "speaker-level trait recognition, 3-fold cross-validation (EPR-T)",
+    "state-level aggregation",
     "subsample with third-person observer ratings (n=68)",
     "test set",
-    "three-class classification",
-    "titles only",
-    "top 10 features (information gain)",
-    "trained on AI-generated data, tested on AI-generated data",
-    "trained on AI-generated data, tested on human data",
-    "trained on Female, tested on Mandarin Chinese (MC) L1 subset",
-    "trained on Female, tested on SAE (English) L1 subset",
-    "trained on Male, tested on Mandarin Chinese (MC) L1 subset",
-    "trained on Male, tested on SAE (English) L1 subset",
-    "trained on human data, tested on AI-generated data",
-    "trained on human data, tested on human data",
-    "trained on human+AI data, tested on AI-generated data",
-    "trained on human+AI data, tested on human data",
-    "trained with TEC as auxiliary task",
-    "trait derived from facet prediction",
-    "trait derived from item prediction",
-    "tweet-level",
-    "user embeddings for known questions",
-    "user-level aggregation",
-    "validation set (20% of training data)",
-    "with depressive symptoms subgroup",
-    "without depressive symptoms subgroup"
+    "text only (no friends feature)",
+    "text only, RFE feature selection",
+    "text-only",
+    "titles",
+    "top 10 selected features (feature selection)",
+    "trained jointly with ISEAR",
+    "trained jointly with TEC",
+    "trained on Female, tested on MC speakers",
+    "trained on Female, tested on SAE speakers",
+    "trained on Male, tested on MC speakers",
+    "trained on Male, tested on SAE speakers",
+    "training augmented with English-to-Dutch translated data",
+    "training augmented with English-to-Italian translated data",
+    "training augmented with English-to-Spanish translated data",
+    "trait scores aggregated from facet-level predictions",
+    "trait scores aggregated from item-level predictions",
+    "tweet level",
+    "user embeddings only (new-user prediction)",
+    "user-level",
+    "video-only",
+    "wave-level",
+    "with depressive symptoms subset",
+    "with other four traits as ground truth features",
+    "without depressive symptoms subset",
+    "zero-shot prompting"
   ],
   "provenance": {
-    "generated": "2026-10-10T20:17:34.242662+00:00",
+    "generated": "2026-10-11T10:24:29.345540+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:a75824e2099196ab7ce41d027daed8d1cad583723638f802c4a929bd4c90ac39",
-    "base_digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    "prompt_hash": "sha256:20eb574e38ce8f2b4663644679f2646d61c751d73f008d7ef98c576e10d2fea0",
+    "base_digest": "sha256:dfd81561d633456edbb85e607be7ca034328d9716fe31330d0f8751e2dde0630"
   }
 }
