@@ -720,7 +720,27 @@ config: dict[str, typing.Any] = {
                     },
                     'score': {
                         'type': 'float',
-                        'description': 'The value as reported, on the scale reported (a percentage stays a percentage).',
+                        'description': (
+                            'The value as reported, on the scale reported (a percentage stays a percentage); the '
+                            'scale goes in scale.'
+                        ),
+                    },
+                    # Since 2026-10-11: score keeps the printed scale so it
+                    # can be checked against its quote, but about a third of
+                    # accuracy/F1/AUC rows were proportions and the rest
+                    # percentages, with nothing saying which. One paper
+                    # (arxiv.2406.16223) mixes both, hence "per table".
+                    'scale': {
+                        'type': 'enum',
+                        'choices': ['proportion', 'percent'],
+                        'description': (
+                            'How score is printed, for a metric that runs from 0 to 1 and can be given as a '
+                            'percentage (accuracy, any F1, AUC, and such a metric under other): proportion when the '
+                            'paper prints it between 0 and 1 (0.68), percent when between 0 and 100 (68.0 or 68%). '
+                            'Take it from how the table or sentence the number comes from prints its numbers, not '
+                            'from what is usual for the metric. Empty for a correlation, an error such as rmse or '
+                            'mae, and any other metric without a 0 to 1 range.'
+                        ),
                     },
                 },
                 # Raised 2026-10-08 from 32768, at which 11 papers were cut
