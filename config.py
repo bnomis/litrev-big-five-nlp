@@ -773,6 +773,17 @@ config: dict[str, typing.Any] = {
             # (n=745)").
             'splits': {'columns': ['results.split']},
         },
+        # Added 2026-10-11: papers print a bounded metric as 0.68 or as
+        # 68.0, sometimes both in one paper, and `scale` records which.
+        # `other` is left out: it holds unbounded metrics too, and its
+        # scale cell is not trustworthy enough to multiply by 100.
+        'scales': {
+            'results.score': {
+                'scale': 'scale',
+                'where': {'metric': ['accuracy', 'f1', 'f1_macro', 'f1_weighted', 'auc']},
+                'to': 'percent',
+            },
+        },
     },
     'store': {
         'path': 'output/litrev.db',
