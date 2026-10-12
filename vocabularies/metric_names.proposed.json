@@ -55,7 +55,7 @@
     "Mean Difference",
     "Micro-F1",
     "Ordinal tolerance accuracy",
-    "R (square-root of R\\u00b2)",
+    "R (square-root of R²)",
     "RMSE difference (with vs. without convincingness signal)",
     "R_acc",
     "Softmax Cross Entropy",

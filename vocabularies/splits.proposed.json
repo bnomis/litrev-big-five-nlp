@@ -313,8 +313,8 @@
     "with depressive symptoms",
     "with ground truth labels of other four traits",
     "without depressive symptoms",
-    "word count \\u2265100 filter",
-    "word count \\u226575 filter"
+    "word count ≥100 filter",
+    "word count ≥75 filter"
   ],
   "provenance": {
     "generated": "2026-10-11T18:44:32.685280+00:00",
