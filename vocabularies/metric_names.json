@@ -1,0 +1,55 @@
+{
+  "entries": {
+    "Balanced Accuracy": [
+      "Balanced Accuracy (BA)",
+      "UAR"
+    ],
+    "Cohen's kappa": [
+      "kappa statistic"
+    ],
+    "Disattenuated Pearson R": [
+      "disattenuated Pearson correlation (r_dis)",
+      "disattenuated correlation"
+    ],
+    "weighted precision": [
+      "Precision (weighted average)"
+    ],
+    "weighted recall": [
+      "Recall (weighted average)"
+    ],
+    "Zero-One Loss": []
+  },
+  "kept": [
+    "1 - NRMSE",
+    "A-Mean",
+    "A-TNR",
+    "A-TPR",
+    "Acc Max A-Mean",
+    "Acc Max G-Mean",
+    "Accuracy Improvement Percentage (AIP)",
+    "Average",
+    "correlation with ground-truth labels",
+    "cosine similarity",
+    "Exact Match Ratio",
+    "F1(mc)",
+    "G-Mean",
+    "G-TNR",
+    "G-TPR",
+    "Hamming Loss",
+    "MAPE",
+    "Marginal Error",
+    "Mean Concordance Correlation Coefficient (mCCC)",
+    "Mean Difference",
+    "Micro-F1",
+    "off-by-one accuracy",
+    "Ordinal tolerance accuracy",
+    "percentage of correctly classified low-extraversion users",
+    "R (square-root of R\\u00b2)",
+    "R_acc",
+    "relative error",
+    "RMSE difference (with vs. without convincingness signal)",
+    "Softmax Cross Entropy",
+    "trend alignment score",
+    "validity"
+  ]
+}

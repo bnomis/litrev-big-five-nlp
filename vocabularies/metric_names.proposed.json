@@ -1,0 +1,78 @@
+{
+  "entries": {
+    "Balanced Accuracy": [
+      "Balanced Accuracy",
+      "Balanced Accuracy (BA)"
+    ],
+    "Cohen's kappa": [
+      "Cohen's kappa",
+      "kappa statistic"
+    ],
+    "Disattenuated Pearson R": [
+      "Disattenuated Pearson R",
+      "disattenuated Pearson correlation (r_dis)",
+      "disattenuated correlation"
+    ],
+    "Zero-One Loss": [
+      "Zero-One Loss",
+      "Zero-one loss"
+    ],
+    "weighted precision": [
+      "Precision (weighted average)",
+      "weighted precision"
+    ],
+    "weighted recall": [
+      "Recall (weighted average)",
+      "weighted recall"
+    ]
+  },
+  "rationale": {
+    "Balanced Accuracy": "Same metric with/without abbreviation.",
+    "Cohen's kappa": "Both refer to Cohen's kappa statistic.",
+    "Disattenuated Pearson R": "All refer to the disattenuated Pearson correlation coefficient.",
+    "Zero-One Loss": "Same metric differing only in case.",
+    "weighted precision": "Same metric, weighted precision.",
+    "weighted recall": "Same metric, weighted recall."
+  },
+  "unassigned": [
+    "1 - NRMSE",
+    "A-Mean",
+    "A-TNR",
+    "A-TPR",
+    "Acc Max A-Mean",
+    "Acc Max G-Mean",
+    "Accuracy Improvement Percentage (AIP)",
+    "Average",
+    "Exact Match Ratio",
+    "F1(mc)",
+    "G-Mean",
+    "G-TNR",
+    "G-TPR",
+    "Hamming Loss",
+    "MAPE",
+    "Marginal Error",
+    "Mean Concordance Correlation Coefficient (mCCC)",
+    "Mean Difference",
+    "Micro-F1",
+    "Ordinal tolerance accuracy",
+    "R (square-root of R\\u00b2)",
+    "RMSE difference (with vs. without convincingness signal)",
+    "R_acc",
+    "Softmax Cross Entropy",
+    "UAR",
+    "correlation with ground-truth labels",
+    "cosine similarity",
+    "off-by-one accuracy",
+    "percentage of correctly classified low-extraversion users",
+    "relative error",
+    "trend alignment score",
+    "validity"
+  ],
+  "provenance": {
+    "generated": "2026-10-12T04:16:11.162504+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "prompt_hash": "sha256:3e65fca5b51eeb4b77e536f9a14ebfaa325e85961e023d78077455da7b06ce24",
+    "base_digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  }
+}
