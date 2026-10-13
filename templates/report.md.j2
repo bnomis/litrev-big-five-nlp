@@ -1,0 +1,33 @@
+{#- The default report template, with charts after the sections they
+    illustrate, and this review's own document split.
+
+    The split was report.supplementary_sections until 2026-10-13, which
+    cannot be set beside report.templates. default_sections is LitRev's
+    default split, so only the review's departures from it are named here:
+    synthesis moves to supplementary.md, and the four appendices LitRev
+    would send there stay in this document. Any section LitRev adds later
+    arrives through the loop, in whichever document LitRev's default puts it.
+-#}
+{% set moved_out = ['synthesis'] %}
+{% for name in default_sections if name not in moved_out %}
+{{ section(name) }}
+{% if name == 'frequencies' %}
+
+{{ chart('bar', x='modality', caption='Included studies by input modality', label='modality') }}
+
+{{ chart('bar', x='datasets', min_count=3, horizontal=True, caption='Datasets used by three or more included studies', label='datasets') }}
+{% elif name == 'results' %}
+
+{{ chart('box', source='results', x='trait', y='score', where={'metric': 'accuracy', 'role': 'proposed', 'split': None, 'trait': ['O', 'C', 'E', 'A', 'N']}, caption="Accuracy (%) of each study's proposed system by trait, on its main condition", label='accuracy-by-trait') }}
+{% elif name == 'riskofbias' %}
+
+{{ chart('rob_summary', caption='Risk of bias by domain, as a share of included studies', label='rob-summary') }}
+
+{{ chart('rob_summary', units=True, caption='Risk of bias in the per-dataset domains, as a share of study-dataset pairs', label='rob-summary-units') }}
+
+The judgement for each study is charted in the supplementary document ({{ ref('rob-traffic-light') }}).
+{% endif %}
+{% endfor %}
+{% for name in ['screening_exclusions', 'search_strategy', 'checklist', 'normalisation'] %}
+{{ section(name) }}
+{% endfor %}

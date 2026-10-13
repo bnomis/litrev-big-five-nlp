@@ -837,6 +837,15 @@ config: dict[str, typing.Any] = {
         'format': 'mermaid',
     },
     'report': {
+        # The default templates with charts added after the sections they
+        # illustrate (2026-10-13), and the per-study risk-of-bias traffic
+        # light in the supplementary document. Both are named because a
+        # non-empty templates replaces both defaults: naming report alone
+        # would stop supplementary.md being written at all.
+        'templates': {
+            'report': 'templates/report.md.j2',
+            'supplementary': 'templates/supplementary.md.j2',
+        },
         # Markdown is written whether it is listed or not - the PDF is a
         # pandoc conversion of it, so asking for `pdf` alone would still
         # leave the markdown behind. Listing both says so out loud, and
@@ -932,7 +941,8 @@ config: dict[str, typing.Any] = {
         # that survives, which is a hand-maintained copy of the `Section`
         # literal - a later phase's new section would go missing from
         # this review silently.
-        'supplementary_sections': ['synthesis', 'studies', 'exclusions'],
+        # The document split now lives in templates/report.md.j2 - see the
+        # comment at its top.
     },
     'scan': {
         # Where `download` writes, so a hand-collected PDF dropped into

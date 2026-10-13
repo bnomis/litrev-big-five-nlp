@@ -1,0 +1,13 @@
+{#- The default supplementary template with this review's split: synthesis
+    joins it, and the appendices report.md.j2 keeps are left out. See the
+    comment at the top of report.md.j2.
+-#}
+{% set kept_in_report = ['screening_exclusions', 'search_strategy', 'checklist', 'normalisation'] %}
+{{ section('synthesis') }}
+{% for name in default_sections if name not in kept_in_report %}
+{{ section(name) }}
+{% if name == 'studies' %}
+
+{{ chart('rob_traffic_light', caption='Risk of bias judgement for each included study and domain', label='rob-traffic-light') }}
+{% endif %}
+{% endfor %}
