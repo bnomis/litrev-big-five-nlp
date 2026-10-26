@@ -592,8 +592,9 @@ config: dict[str, typing.Any] = {
         # them a majority-class baseline and the paper's own system are
         # indistinguishable rows on the same dataset, trait and metric.
         #
-        # Union budget: `dataset`, `split`, `model` and `score` are nullable
-        # non-enum columns and cost one each; the enums, `quote` and
+        # Union budget: `dataset`, `split`, `model`, `metric_name`, `score`
+        # and `n` are nullable non-enum columns and cost one each; the
+        # enums, `quote` and
         # `location` cost nothing - far under Anthropic's ceiling.
         #
         # `split` added 2026-10-10: the `datasets` vocabulary folds a
@@ -773,6 +774,25 @@ config: dict[str, typing.Any] = {
                             'mae, and any other metric without a 0 to 1 range.'
                         ),
                     },
+                    # Added 2026-10-26 for `analyse` (LitRev analyser spec,
+                    # decision D1 of 2026-10-25): a correlation without the
+                    # number of people it is on has no weight in a pooled
+                    # estimate. The description lets n come from outside the
+                    # results section, where a test set's size is usually
+                    # given, and keeps the table's "do not compute" rule, so
+                    # a size the paper gives only as a corpus and a ratio
+                    # stays empty and every n traces to a quote.
+                    'n': {
+                        'type': 'int',
+                        'description': (
+                            'The number of people the score is computed over: the size of the test set it is on, '
+                            'or of the whole sample when the evaluation is cross-validation. People, not texts, '
+                            'posts or essays, unless the paper has one text per person. Take it from wherever the '
+                            'paper states it, its data or method section included, even though the score itself '
+                            'comes from the results. Empty when the paper does not state the number: never work '
+                            'it out from a corpus size and a split ratio.'
+                        ),
+                    },
                 },
                 # Raised 2026-10-08 from 32768, at which 11 papers were cut
                 # off and recorded failed. 160000 clears the 128k
@@ -820,6 +840,47 @@ config: dict[str, typing.Any] = {
                 'where': {'metric': ['accuracy', 'f1', 'f1_macro', 'f1_weighted', 'precision', 'recall', 'auc']},
                 'to': 'percent',
             },
+        },
+    },
+    # Added 2026-10-26, waiting on the tabulate re-send that fills
+    # results.n: until it runs, every row is excluded for a missing ni.
+    #
+    # Pearson r only. 35 papers report it (1043 rows on 2026-10-26),
+    # against 3 for spearman, so a correlation pool is the one the table
+    # can give. Accuracy and F1 are not pooled: a percentage with no
+    # chance level per dataset is not one effect across studies.
+    #
+    # Most papers give r per trait rather than an average, hence one
+    # analysis per trait beside the average. Only the paper's own final
+    # system is pooled (role proposed), since baselines and prior work
+    # are the same few systems counted again in every paper that reruns
+    # them. A paper's several rows on one trait - datasets and splits -
+    # stay in as a multilevel model clustered by paper. `where` cannot
+    # select an empty split, so the main condition is not singled out.
+    #
+    # cluster stays 'paper': 'dataset' would treat every Essays result
+    # as one sample, which is the stronger independence assumption to
+    # drop, and is worth a sensitivity run once the pools exist.
+    'analyse': {
+        'analyses': {
+            f'r_{name}': {
+                'description': f'Correlation of predicted with self-reported {label}',
+                'table': 'results',
+                'measure': 'ZCOR',
+                'columns': {'ri': 'score', 'ni': 'n'},
+                'where': {'metric': 'pearson_r', 'role': 'proposed', 'trait': trait},
+                'dependence': 'multilevel',
+                'cluster': 'paper',
+                'subgroups': ['dataset'],
+            }
+            for name, trait, label in [
+                ('average', 'average', 'Big Five scores, averaged over the traits'),
+                ('openness', 'O', 'openness'),
+                ('conscientiousness', 'C', 'conscientiousness'),
+                ('extraversion', 'E', 'extraversion'),
+                ('agreeableness', 'A', 'agreeableness'),
+                ('neuroticism', 'N', 'neuroticism'),
+            ]
         },
     },
     'store': {
