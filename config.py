@@ -592,10 +592,10 @@ config: dict[str, typing.Any] = {
         # them a majority-class baseline and the paper's own system are
         # indistinguishable rows on the same dataset, trait and metric.
         #
-        # Union budget: `dataset`, `split`, `model`, `metric_name`, `score`
-        # and `n` are nullable non-enum columns and cost one each; the
-        # enums, `quote` and
-        # `location` cost nothing - far under Anthropic's ceiling.
+        # Union budget: `dataset`, `split`, `model`, `metric_name`, `score`,
+        # `n` and `n_quote` are nullable non-enum columns and cost one
+        # each; the enums, `quote` and `location` cost nothing - far under
+        # Anthropic's ceiling.
         #
         # `split` added 2026-10-10: the `datasets` vocabulary folds a
         # subset or protocol into its corpus, right for the extract field
@@ -779,9 +779,16 @@ config: dict[str, typing.Any] = {
                     # number of people it is on has no weight in a pooled
                     # estimate. The description lets n come from outside the
                     # results section, where a test set's size is usually
-                    # given, and keeps the table's "do not compute" rule, so
-                    # a size the paper gives only as a corpus and a ratio
-                    # stays empty and every n traces to a quote.
+                    # given, and keeps the table's "do not compute" rule.
+                    #
+                    # Tightened 2026-10-27 after a 5-paper sample: one paper
+                    # (acl_anthology:2023.icon-1.68) got n = 270 by adding a
+                    # table's low and high class counts, a route the first
+                    # wording did not name. So n is now only a count the
+                    # paper prints as such, and n_quote holds the sentence it
+                    # came from: the row's `quote` supports the score, and
+                    # an n from the data section could not otherwise be
+                    # checked without reopening the paper.
                     'n': {
                         'type': 'int',
                         'description': (
@@ -789,8 +796,17 @@ config: dict[str, typing.Any] = {
                             'or of the whole sample when the evaluation is cross-validation. People, not texts, '
                             'posts or essays, unless the paper has one text per person. Take it from wherever the '
                             'paper states it, its data or method section included, even though the score itself '
-                            'comes from the results. Empty when the paper does not state the number: never work '
-                            'it out from a corpus size and a split ratio.'
+                            'comes from the results. Only a number the paper prints as a count of people (or of '
+                            'texts, when it has one text per person): never a sum, difference or product of other '
+                            'numbers, such as class counts in a table or a corpus size and a split ratio. Empty '
+                            'when the paper prints no such number.'
+                        ),
+                    },
+                    'n_quote': {
+                        'type': 'str',
+                        'description': (
+                            'The sentence or table cell n is taken from, copied exactly from the paper. Empty when '
+                            'n is empty.'
                         ),
                     },
                 },
