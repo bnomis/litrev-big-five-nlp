@@ -27,7 +27,8 @@
       "First Impressions V2 Dataset",
       "FirstImpr",
       "FIv2",
-      "FIv2 (ChaLearn First Impressions v2)"
+      "FIv2 (ChaLearn First Impressions v2)",
+      "ChaLearn"
     ],
     "ChatGPT": [
       "ChatGPT interaction logs (new)",
@@ -108,7 +109,8 @@
       "stream-of-consciousness",
       "stream-of-consciousness essay dataset",
       "Stream-of-consciousness essays",
-      "Stream-of-consciousness writing"
+      "Stream-of-consciousness writing",
+      "essay dataset"
     ],
     "Essays (GloVe)": [
       "AUG-Essays (GloVe)",
@@ -269,7 +271,8 @@
       "Pandora_sub"
     ],
     "Pantheon 1.0": [
-      "Pantheon 1.0 dataset"
+      "Pantheon 1.0 dataset",
+      "Pantheon"
     ],
     "Personality-1260": [
       "Personality-1260"
@@ -498,6 +501,10 @@
     "United States Congressional Records (Congress)",
     "Unnamed corpus (new)",
     "X",
-    "YourMorals"
+    "YourMorals",
+    "PAN 2015 (English)",
+    "PAN 2015 (Italian)",
+    "PAN 2015 (Spanish)",
+    "Blogs"
   ]
 }

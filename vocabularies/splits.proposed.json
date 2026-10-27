@@ -1,326 +1,137 @@
 {
   "entries": {
-    "English, 10-fold cross-validation": [
-      "English, 10-fold cross-validation"
-    ],
-    "Italian, 10-fold cross-validation": [
-      "Italian, 10-fold cross-validation"
-    ],
-    "Spanish, 10-fold cross-validation": [
-      "Spanish, 10-fold cross-validation"
-    ],
-    "data type: Account Credentials": [
-      "Account Credentials data-type subset"
-    ],
-    "data type: Age": [
-      "Age data-type subset"
-    ],
-    "data type: Criminal Records": [
-      "Criminal Records data-type subset"
-    ],
-    "data type: Ethnicity and Citizenship": [
-      "Ethnicity and Citizenship data-type subset"
-    ],
     "data type: Family Life and Relation.": [
-      "Family Life and Relationship data-type subset"
-    ],
-    "data type: Gender": [
-      "Gender data-type subset"
-    ],
-    "data type: Job and Education": [
-      "Job and Education data-type subset"
-    ],
-    "data type: Lifestyle and Habits": [
-      "Lifestyle and Habits data-type subset"
-    ],
-    "data type: Location and Mobility": [
-      "Location and Mobility data-type subset"
-    ],
-    "data type: Mental Health": [
-      "Mental Health data-type subset"
-    ],
-    "data type: Mental State, Pers., Mood": [
-      "Mental State, Personality, Mood data-type subset"
-    ],
-    "data type: Personal Identifiers": [
-      "Personal Identifiers data-type subset"
-    ],
-    "data type: Physical Health Diagnosis": [
-      "Physical Health Diagnosis data-type subset"
-    ],
-    "data type: Physical Traits": [
-      "Physical Traits data-type subset"
-    ],
-    "data type: Political Views": [
-      "Political Views data-type subset"
-    ],
-    "data type: Recreational Consumption": [
-      "Recreational Consumption data-type subset"
-    ],
-    "data type: Religion": [
-      "Religion data-type subset"
+      "Family Life and Relationship"
     ],
     "data type: Sex. and Dating Activities": [
-      "Sexual and Dating Activities data-type subset"
-    ],
-    "data type: Sexual orientation": [
-      "Sexual orientation data-type subset"
-    ],
-    "data type: Wealth Details Salary": [
-      "Wealth Details Salary data-type subset"
-    ],
-    "use case: Arg. or Summary Gen.": [
-      "Argument or Summary Generation use-case subset"
-    ],
-    "use case: Asking About the Model": [
-      "Asking About the Model use-case subset"
-    ],
-    "use case: Computer Programming": [
-      "Computer Programming use-case subset"
-    ],
-    "use case: Cooking and Recipes": [
-      "Cooking and Recipes use-case subset"
-    ],
-    "use case: Creative Ideation": [
-      "Creative Ideation use-case subset"
-    ],
-    "use case: Data Analysis": [
-      "Data Analysis use-case subset"
-    ],
-    "use case: Edit/Critique Provided Text": [
-      "Edit/Critique Provided Text use-case subset"
-    ],
-    "use case: Games and Role Play": [
-      "Games and Role Play use-case subset"
-    ],
-    "use case: Gen./Retrieve Other Media": [
-      "Generate/Retrieve Other Media use-case subset"
-    ],
-    "use case: Greetings and Chitchat": [
-      "Greetings and Chitchat use-case subset"
-    ],
-    "use case: Health/Fit./Beauty/S.-Care": [
-      "Health, Fitness, Beauty, Self-Care use-case subset"
-    ],
-    "use case: How-To Advice": [
-      "How-To Advice use-case subset"
-    ],
-    "use case: Mathematical Calculation": [
-      "Mathematical Calculation use-case subset"
-    ],
-    "use case: Personal Writing or Comm.": [
-      "Personal Writing or Communication use-case subset"
-    ],
-    "use case: Purchasable Products": [
-      "Purchasable Products use-case subset"
-    ],
-    "use case: Relation. and Pers. Reflect.": [
-      "Relationships and Personal Reflection use-case subset"
-    ],
-    "use case: Specific Info": [
-      "Specific Info use-case subset"
-    ],
-    "use case: Translation": [
-      "Translation use-case subset"
-    ],
-    "use case: Tutoring or Teaching": [
-      "Tutoring or Teaching use-case subset"
-    ],
-    "use case: Unclear": [
-      "Unclear use-case subset"
-    ],
-    "use case: Write Fiction": [
-      "Write Fiction use-case subset"
+      "Sexual and Dating Activities"
     ]
   },
   "rationale": {
-    "English, 10-fold cross-validation": "English data evaluated with 10-fold cross-validation.",
-    "Italian, 10-fold cross-validation": "Italian data evaluated with 10-fold cross-validation.",
-    "Spanish, 10-fold cross-validation": "Spanish data evaluated with 10-fold cross-validation.",
-    "data type: Account Credentials": "Subset referring to the Account Credentials data type.",
-    "data type: Age": "Subset referring to the Age data type.",
-    "data type: Criminal Records": "Subset referring to the Criminal Records data type.",
-    "data type: Ethnicity and Citizenship": "Subset referring to the Ethnicity and Citizenship data type.",
-    "data type: Family Life and Relation.": "Subset referring to the Family Life and Relationship data type.",
-    "data type: Gender": "Subset referring to the Gender data type.",
-    "data type: Job and Education": "Subset referring to the Job and Education data type.",
-    "data type: Lifestyle and Habits": "Subset referring to the Lifestyle and Habits data type.",
-    "data type: Location and Mobility": "Subset referring to the Location and Mobility data type.",
-    "data type: Mental Health": "Subset referring to the Mental Health data type.",
-    "data type: Mental State, Pers., Mood": "Subset referring to the Mental State, Personality, Mood data type.",
-    "data type: Personal Identifiers": "Subset referring to the Personal Identifiers data type.",
-    "data type: Physical Health Diagnosis": "Subset referring to the Physical Health Diagnosis data type.",
-    "data type: Physical Traits": "Subset referring to the Physical Traits data type.",
-    "data type: Political Views": "Subset referring to the Political Views data type.",
-    "data type: Recreational Consumption": "Subset referring to the Recreational Consumption data type.",
-    "data type: Religion": "Subset referring to the Religion data type.",
-    "data type: Sex. and Dating Activities": "Subset referring to the Sexual and Dating Activities data type.",
-    "data type: Sexual orientation": "Subset referring to the Sexual orientation data type.",
-    "data type: Wealth Details Salary": "Subset referring to the Wealth Details Salary data type.",
-    "use case: Arg. or Summary Gen.": "Subset referring to the Argument or Summary Generation use case.",
-    "use case: Asking About the Model": "Subset referring to the Asking About the Model use case.",
-    "use case: Computer Programming": "Subset referring to the Computer Programming use case.",
-    "use case: Cooking and Recipes": "Subset referring to the Cooking and Recipes use case.",
-    "use case: Creative Ideation": "Subset referring to the Creative Ideation use case.",
-    "use case: Data Analysis": "Subset referring to the Data Analysis use case.",
-    "use case: Edit/Critique Provided Text": "Subset referring to the Edit/Critique Provided Text use case.",
-    "use case: Games and Role Play": "Subset referring to the Games and Role Play use case.",
-    "use case: Gen./Retrieve Other Media": "Subset referring to the Generate/Retrieve Other Media use case.",
-    "use case: Greetings and Chitchat": "Subset referring to the Greetings and Chitchat use case.",
-    "use case: Health/Fit./Beauty/S.-Care": "Subset referring to the Health, Fitness, Beauty, Self-Care use case.",
-    "use case: How-To Advice": "Subset referring to the How-To Advice use case.",
-    "use case: Mathematical Calculation": "Subset referring to the Mathematical Calculation use case.",
-    "use case: Personal Writing or Comm.": "Subset referring to the Personal Writing or Communication use case.",
-    "use case: Purchasable Products": "Subset referring to the Purchasable Products use case.",
-    "use case: Relation. and Pers. Reflect.": "Subset referring to the Relationships and Personal Reflection use case.",
-    "use case: Specific Info": "Subset referring to the Specific Info use case.",
-    "use case: Translation": "Subset referring to the Translation use case.",
-    "use case: Tutoring or Teaching": "Subset referring to the Tutoring or Teaching use case.",
-    "use case: Unclear": "Subset referring to the Unclear use case.",
-    "use case: Write Fiction": "Subset referring to the Write Fiction use case."
+    "data type: Family Life and Relation.": "Spelling variant of the canonical data type label.",
+    "data type: Sex. and Dating Activities": "Spelling variant of the canonical data type label."
   },
   "unassigned": [
-    "'High' class",
-    "'Low' class",
-    "100-item subset",
-    "20-item subset",
-    "3-class labels",
-    "3-fold cross-validation",
-    "60:40 ratio (train:test)",
-    "70:30 ratio (train:test)",
-    "80:20 ratio (train:test)",
-    "<20 chats",
-    "All features",
-    "BF traits only (excluding AO)",
-    "Behavior features only",
-    "Big Five (Global 5) variant",
-    "Dutch",
-    "Dutch test translated into English",
-    "Emotion features only",
-    "English, tweet-level",
-    "Italian test translated into English",
-    "Italian, tweet-level",
-    "LAH representation",
-    "LH representation",
-    "LHNA representation",
-    "LHNASD representation",
-    "LLM-generated texts (aggregated across LLMs and prompts)",
-    "Language features only",
-    "Long transcripts (>3,500 words)",
-    "Medium transcripts (1,500-3,500 words)",
-    "N-grams features, single-trait RF models (replicating [12] methodology)",
-    "N_ta=100 (NMF, 128-dim)",
-    "N_ta=100 (no reduction)",
-    "N_ta=500 (NMF, 128-dim)",
-    "N_ta=500 (no reduction)",
-    "PPM1 preprocessing",
-    "PPM2 preprocessing",
-    "S-A",
-    "S-C",
-    "S-E",
-    "S-Multi-Fair",
-    "S-N",
-    "S-O",
-    "S1: LIWC features only",
-    "S2: Demographic features only",
-    "S3: TF-IDF features only",
-    "S4: LIWC + Demographic",
-    "S5 + RF (embedded) feature selection",
-    "S5: LIWC + Demographic + TF-IDF (no feature selection)",
-    "Short transcripts (<1,500 words)",
-    "Spanish test translated into English",
-    "Spanish, tweet-level",
-    "artificially enriched data",
-    "augmented data without Zemberek preprocessing",
-    "average of 5 runs (significance test)",
-    "binary labels",
-    "combined user+question embedding task",
-    "compared to Modello 1",
-    "compared to Modello 2",
-    "compared to Modello 3",
-    "confidence > 2 subset",
-    "counselor role",
-    "cross-corpus (trained on CXD)",
-    "cross-corpus (trained on myPersonality)",
-    "dialogue setting, original (non-augmented) data",
-    "expert ratings (Annotator 1)",
-    "expert ratings (Annotator 1), S-A",
-    "expert ratings (Annotator 1), S-C",
-    "expert ratings (Annotator 1), S-E",
-    "expert ratings (Annotator 1), S-N",
-    "expert ratings (Annotator 1), S-O",
-    "expert ratings (Annotator 2)",
-    "expert ratings (Annotator 2), S-A",
-    "expert ratings (Annotator 2), S-C",
-    "expert ratings (Annotator 2), S-E",
-    "expert ratings (Annotator 2), S-N",
-    "expert ratings (Annotator 2), S-O",
-    "expert ratings (Annotator 3)",
-    "expert ratings (Annotator 3), S-A",
-    "expert ratings (Annotator 3), S-C",
-    "expert ratings (Annotator 3), S-E",
-    "expert ratings (Annotator 3), S-N",
-    "expert ratings (Annotator 3), S-O",
-    "expert ratings (Annotator 4)",
-    "expert ratings (Annotator 4), S-A",
-    "expert ratings (Annotator 4), S-C",
-    "expert ratings (Annotator 4), S-E",
-    "expert ratings (Annotator 4), S-N",
-    "expert ratings (Annotator 4), S-O",
-    "extreme class division",
-    "feature selection with top 10 ranked features",
-    "fine-tuned on Essays dataset only (no data fusion)",
-    "fine-tuned on myPersonality dataset only (no data fusion)",
-    "full dialogue (F)",
-    "informant-rated subsample",
-    "monologue setting, augmented data (+500k)",
-    "monologue setting, original (non-augmented) data",
-    "no role-play or questionnaire (direct baseline)",
-    "observer role",
-    "question-embedding task (per-user)",
-    "question-embedding task (per-user), non-reverse-coded responses",
-    "questionnaire only",
-    "random sample of 3400 users",
-    "role-play only",
-    "single + context (S+C)",
-    "single train/test split (cross-comparison protocol)",
-    "single-chat level (per-chat prediction)",
-    "single-dataset training (no data-level fusion)",
-    "test on English (SAE) subset",
-    "test on Mandarin (MC) subset",
-    "text-only input",
-    "third-person observer rating subsample (n=68)",
-    "three-class classification",
-    "trained on AI-generated data",
-    "trained on OC training set 1",
-    "trained on OC training set 2",
-    "trained on OC training set 3",
-    "trained on OC training set 5 (3-class)",
-    "trained on OC training set 6 (3-class)",
-    "trained on human+AI data",
-    "trained on human-authored data",
-    "trained with ISEAR as auxiliary task",
-    "trained with TEC as auxiliary task",
-    "training augmented with English translated to Dutch",
-    "training augmented with English translated to Italian",
-    "training augmented with English translated to Spanish",
-    "trait scores computed from facet-level predictions",
-    "trait scores computed from item-level predictions",
-    "tweet-level",
-    "unconstrained use condition",
-    "user-embedding task (per-question)",
-    "video-only input",
-    "with depressive symptoms",
-    "with ground truth labels of other four traits",
-    "without depressive symptoms",
-    "word count ≥100 filter",
-    "word count ≥75 filter"
+    "+50k augmented data (dialogue, HC-GNN)",
+    "3-class classification (low/medium/high)",
+    "3-class label resolution",
+    "336-item facet-level measure subsample",
+    "60:40 data ratio",
+    "70:30 data ratio",
+    "80:20 data ratio",
+    "AI-to-AI classification, per LLM",
+    "Big Five (Global 5) test",
+    "Big Five traits only",
+    "Dutch test translated into English (nl\u2192en), classified with English-trained model",
+    "Human-to-AI classification, per LLM",
+    "Italian test translated into English (it\u2192en), classified with English-trained model",
+    "Long (>3,500 words) transcripts",
+    "Medium (1,500-3,500 words) transcripts",
+    "POS tagging features",
+    "Random deletion augmentation, 70:30 split, preprocessing scenario 1",
+    "Random deletion augmentation, 70:30 split, preprocessing scenario 2",
+    "Random deletion augmentation, 80:20 split, preprocessing scenario 1",
+    "Random deletion augmentation, 80:20 split, preprocessing scenario 2",
+    "Round 1 only",
+    "Rounds 1-2 cumulative",
+    "Rounds 1-3 cumulative",
+    "Rounds 1-4 cumulative",
+    "Rounds 1-5 cumulative",
+    "S-Multi-Fair (data-volume-controlled)",
+    "SMOTE balancing, 70:30 split, preprocessing scenario 1",
+    "SMOTE balancing, 70:30 split, preprocessing scenario 2",
+    "SMOTE balancing, 80:20 split, preprocessing scenario 1",
+    "SMOTE balancing, 80:20 split, preprocessing scenario 2",
+    "Short (<1,500 words) transcripts",
+    "Spanish test translated into English (es\u2192en), classified with English-trained model",
+    "TOGA augmentation",
+    "artificially enriched test data",
+    "average across real-world datasets",
+    "average of 5 runs",
+    "binary label resolution",
+    "classifier trained on OC training set 1, binary (high/low) classification",
+    "classifier trained on OC training set 2, binary (high/low) classification",
+    "classifier trained on OC training set 3, binary (high/low) classification",
+    "classifier trained on OC training set 5, 3-class (low/medium/high) classification",
+    "classifier trained on OC training set 6, 3-class (low/medium/high) classification",
+    "confidence greater than two subset",
+    "correlation with observer ratings (n=68 subsample)",
+    "cross-comparison (fixed 8:1:1 split, averaged over 100 trials)",
+    "disattenuated correlation",
+    "extreme split",
+    "fairness evaluation with age attribute prompting",
+    "fairness evaluation with demographic attribute prompting",
+    "fairness evaluation with gender attribute prompting",
+    "fine-tuned on essays dataset only (without data fusion)",
+    "fine-tuned on myPersonality dataset only (without data fusion)",
+    "fluent in English subset",
+    "full (F) format",
+    "full-context input",
+    "informant subsample",
+    "joint training with ISEAR as auxiliary emotion task",
+    "joint training with TEC as auxiliary emotion task",
+    "medium input (1000 words)",
+    "monologue setting (+500k augmented data)",
+    "monologue setting (original data, no augmentation)",
+    "multi-label task formulation",
+    "no dimension reduction, N_ta=100",
+    "no dimension reduction, N_ta=500",
+    "non-reverse-coded responses",
+    "not fluent in English subset",
+    "real-world data, by trait (averaged across datasets)",
+    "regression (no median split)",
+    "single + context (S+C) format",
+    "single-context, Agreeableness agent (S-A)",
+    "single-context, Agreeableness agent (S-A); expert ratings ground truth (Annotator 1)",
+    "single-context, Agreeableness agent (S-A); expert ratings ground truth (Annotator 2)",
+    "single-context, Agreeableness agent (S-A); expert ratings ground truth (Annotator 3)",
+    "single-context, Agreeableness agent (S-A); expert ratings ground truth (Annotator 4)",
+    "single-context, Conscientiousness agent (S-C)",
+    "single-context, Conscientiousness agent (S-C); expert ratings ground truth (Annotator 1)",
+    "single-context, Conscientiousness agent (S-C); expert ratings ground truth (Annotator 2)",
+    "single-context, Conscientiousness agent (S-C); expert ratings ground truth (Annotator 3)",
+    "single-context, Conscientiousness agent (S-C); expert ratings ground truth (Annotator 4)",
+    "single-context, Extraversion agent (S-E)",
+    "single-context, Extraversion agent (S-E); expert ratings ground truth (Annotator 1)",
+    "single-context, Extraversion agent (S-E); expert ratings ground truth (Annotator 2)",
+    "single-context, Extraversion agent (S-E); expert ratings ground truth (Annotator 3)",
+    "single-context, Extraversion agent (S-E); expert ratings ground truth (Annotator 4)",
+    "single-context, Neuroticism agent (S-N)",
+    "single-context, Neuroticism agent (S-N); expert ratings ground truth (Annotator 1)",
+    "single-context, Neuroticism agent (S-N); expert ratings ground truth (Annotator 2)",
+    "single-context, Neuroticism agent (S-N); expert ratings ground truth (Annotator 3)",
+    "single-context, Neuroticism agent (S-N); expert ratings ground truth (Annotator 4)",
+    "single-context, Openness agent (S-O)",
+    "single-context, Openness agent (S-O); expert ratings ground truth (Annotator 1)",
+    "single-context, Openness agent (S-O); expert ratings ground truth (Annotator 2)",
+    "single-context, Openness agent (S-O); expert ratings ground truth (Annotator 3)",
+    "single-context, Openness agent (S-O); expert ratings ground truth (Annotator 4)",
+    "state-level aggregated, compared to Rentfrow et al. (2013) ground truth",
+    "state-level aggregated, compared to Rentfrow et al. (2013) ground truth, no feature selection",
+    "state-level aggregated, compared to Rentfrow et al. (2013) ground truth, with feature selection",
+    "stream-of-consciousness writing",
+    "tested on MC (Mandarin) speakers",
+    "tested on SAE (English) speakers",
+    "testing question embeddings (held-out questions, known users)",
+    "testing user embeddings (held-out users, known questions)",
+    "text-only input modality",
+    "third-person observer ratings subsample (n=68)",
+    "trained on AI data",
+    "trained on Human data",
+    "trait computed from facet-level model predictions",
+    "trait computed from item-level ordinal regression predictions",
+    "tweet-level, 10-fold stratified cross-validation",
+    "user-level aggregation",
+    "video-only input modality",
+    "with other four traits' ground truth labels as additional features",
+    "word count \u2265 100",
+    "word count \u2265 75"
   ],
   "provenance": {
-    "generated": "2026-10-11T18:44:32.685280+00:00",
+    "generated": "2026-10-27T09:39:56.828427+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:aba6dcea591c490960c434113022ab9b7339f06ce4e440398a5f46c3afd1ca03",
-    "base_digest": "sha256:2a3d158c3585d708708502856083d4091d0b97f389bc64f41577660a7646b2c3"
+    "prompt_hash": "sha256:daad8294c6868ca933184fc1a8e2e64df55a9d4e7f8bf7dd1ff51d49e6566316",
+    "base_digest": "sha256:6beaf248c951413f9197a039ec712f10dcc347cd76b96dab523627abe0ee3a82"
   }
 }

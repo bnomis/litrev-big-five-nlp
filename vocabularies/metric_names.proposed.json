@@ -1,78 +1,29 @@
 {
-  "entries": {
-    "Balanced Accuracy": [
-      "Balanced Accuracy",
-      "Balanced Accuracy (BA)"
-    ],
-    "Cohen's kappa": [
-      "Cohen's kappa",
-      "kappa statistic"
-    ],
-    "Disattenuated Pearson R": [
-      "Disattenuated Pearson R",
-      "disattenuated Pearson correlation (r_dis)",
-      "disattenuated correlation"
-    ],
-    "Zero-One Loss": [
-      "Zero-One Loss",
-      "Zero-one loss"
-    ],
-    "weighted precision": [
-      "Precision (weighted average)",
-      "weighted precision"
-    ],
-    "weighted recall": [
-      "Recall (weighted average)",
-      "weighted recall"
-    ]
-  },
-  "rationale": {
-    "Balanced Accuracy": "Same metric with/without abbreviation.",
-    "Cohen's kappa": "Both refer to Cohen's kappa statistic.",
-    "Disattenuated Pearson R": "All refer to the disattenuated Pearson correlation coefficient.",
-    "Zero-One Loss": "Same metric differing only in case.",
-    "weighted precision": "Same metric, weighted precision.",
-    "weighted recall": "Same metric, weighted recall."
-  },
+  "entries": {},
+  "rationale": {},
   "unassigned": [
-    "1 - NRMSE",
-    "A-Mean",
-    "A-TNR",
-    "A-TPR",
-    "Acc Max A-Mean",
-    "Acc Max G-Mean",
-    "Accuracy Improvement Percentage (AIP)",
-    "Average",
-    "Exact Match Ratio",
-    "F1(mc)",
-    "G-Mean",
-    "G-TNR",
-    "G-TPR",
-    "Hamming Loss",
-    "MAPE",
-    "Marginal Error",
-    "Mean Concordance Correlation Coefficient (mCCC)",
-    "Mean Difference",
-    "Micro-F1",
-    "Ordinal tolerance accuracy",
-    "R (square-root of R²)",
-    "RMSE difference (with vs. without convincingness signal)",
-    "R_acc",
-    "Softmax Cross Entropy",
-    "UAR",
-    "correlation with ground-truth labels",
-    "cosine similarity",
-    "off-by-one accuracy",
-    "percentage of correctly classified low-extraversion users",
-    "relative error",
-    "trend alignment score",
-    "validity"
+    "A-Mean (arithmetic mean of TPR and TNR)",
+    "Accuracy at max A-Mean",
+    "Accuracy at max G-Mean",
+    "Correlation from Ground-Truth Labels (Corr.)",
+    "Exact Match Ratio (EMR)",
+    "G-Mean (geometric mean of TPR and TNR)",
+    "Intraclass correlation coefficient (ICC)",
+    "Maximum absolute error",
+    "RMSE improvement over baseline",
+    "R_acc (1-MAE)",
+    "Softmax Cross Entropy loss",
+    "Square-root of the coefficient of determination",
+    "Trend",
+    "percentage of low-extraversion users correctly classified (NPV/TNR)",
+    "unweighted average recall (UAR)",
+    "\u043a\u043e\u044d\u0444\u0444\u0438\u0446\u0438\u0435\u043d\u0442 \u043a\u043e\u0440\u0440\u0435\u043b\u044f\u0446\u0438\u0438 \u043a\u043e\u043d\u043a\u043e\u0440\u0434\u0430\u0446\u0438\u0438 \u041b\u0438\u043d\u0430 (mCCC)"
   ],
   "provenance": {
-    "generated": "2026-10-12T04:16:11.162504+00:00",
+    "generated": "2026-10-27T09:39:56.831180+00:00",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
-    "prompt_hash": "sha256:3e65fca5b51eeb4b77e536f9a14ebfaa325e85961e023d78077455da7b06ce24",
-    "base_digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    "prompt_hash": "sha256:4d44b208f2e668cb912c166414b62d713cbeaeb3d2ae121ec5da87c435d3e04d",
+    "base_digest": "sha256:6955eb6e8baddf19acc167b23d93184c7a2ccf539720e9772d8773cd56e8944c"
   }
 }

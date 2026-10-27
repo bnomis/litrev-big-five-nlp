@@ -2,7 +2,9 @@
   "entries": {
     "Balanced Accuracy": [
       "Balanced Accuracy (BA)",
-      "UAR"
+      "UAR",
+      "unweighted average recall (UAR)",
+      "A-Mean (arithmetic mean of TPR and TNR)"
     ],
     "Cohen's kappa": [
       "kappa statistic"
@@ -50,6 +52,20 @@
     "RMSE difference (with vs. without convincingness signal)",
     "Softmax Cross Entropy",
     "trend alignment score",
-    "validity"
+    "validity",
+    "Accuracy at max A-Mean",
+    "Accuracy at max G-Mean",
+    "Correlation from Ground-Truth Labels (Corr.)",
+    "Exact Match Ratio (EMR)",
+    "G-Mean (geometric mean of TPR and TNR)",
+    "Intraclass correlation coefficient (ICC)",
+    "Maximum absolute error",
+    "RMSE improvement over baseline",
+    "R_acc (1-MAE)",
+    "Softmax Cross Entropy loss",
+    "Square-root of the coefficient of determination",
+    "Trend",
+    "percentage of low-extraversion users correctly classified (NPV/TNR)",
+    "коэффициент корреляции конкордации Лина (mCCC)"
   ]
 }
