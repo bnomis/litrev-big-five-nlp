@@ -934,8 +934,10 @@ config: dict[str, typing.Any] = {
         # leave the markdown behind. Listing both says so out loud, and
         # keeps the two files in step: with markdown alone, a rerun
         # refreshes report.md and leaves a stale report.pdf beside it.
-        # Needs `pandoc` and the `typst` engine on PATH.
-        'formats': ['markdown', 'latex', 'pdf'],
+        # Needs `pandoc` and the `typst` engine on PATH. `html` writes the
+        # whole review as one self-contained page with interactive forest
+        # charts, added 2026-10-27.
+        'formats': ['markdown', 'latex', 'pdf', 'html'],
         # The characteristics table as three, grouped the way the README's
         # "Reading the extractions" section reads the fields: what data,
         # how it was modelled, and what was found. As one table the ten
