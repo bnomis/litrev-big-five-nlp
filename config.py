@@ -871,8 +871,10 @@ config: dict[str, typing.Any] = {
     # system is pooled (role proposed), since baselines and prior work
     # are the same few systems counted again in every paper that reruns
     # them. A paper's several rows on one trait - datasets and splits -
-    # stay in as a multilevel model clustered by paper. `where` cannot
-    # select an empty split, so the main condition is not singled out.
+    # stay in as a multilevel model clustered by paper. Only each paper's
+    # main condition is pooled: an empty split, plus N_ta=500 for the
+    # one paper (2021.naacl-main.357) that reports only N_ta=100 and
+    # N_ta=500, so subsets, informant and subsample rows stay out.
     #
     # cluster stays 'paper': 'dataset' would treat every Essays result
     # as one sample, which is the stronger independence assumption to
@@ -884,7 +886,11 @@ config: dict[str, typing.Any] = {
                 'table': 'results',
                 'measure': 'ZCOR',
                 'columns': {'ri': 'score', 'ni': 'n'},
-                'where': {'metric': 'pearson_r', 'role': 'proposed', 'trait': trait},
+                'where': {'metric': 'pearson_r', 'role': 'proposed', 'split': [None, 'N_ta=500'], 'trait': trait},
+                'exclude': {
+                    'doi:10.1038/s41598-024-57271-z': 'correlates with how the public perceives famous people, not with self-report',
+                    'doi:10.48550/arxiv.2501.16344': 'Table 2 correlates with PsychEmb, a text model\'s trait estimates, not with self-report',
+                },
                 'dependence': 'multilevel',
                 'cluster': 'paper',
                 'subgroups': ['dataset'],
