@@ -1,33 +1,32 @@
-{#- The default report template, with charts after the sections they
-    illustrate, and this review's own document split.
-
-    The split was report.supplementary_sections until 2026-10-13, which
-    cannot be set beside report.templates. default_sections is LitRev's
-    default split, so only the review's departures from it are named here:
-    synthesis moves to supplementary.md, and the four appendices LitRev
-    would send there stay in this document. Any section LitRev adds later
-    arrives through the loop, in whichever document LitRev's default puts it.
+{#- The manuscript: what a journal prints. Decided 2026-10-28 in
+    manuscript-review-2026-10-28.md (D1-D3): every per-study table, the
+    descriptive tables and the appendices go to supplementary.md; the
+    charts stay here under headings of their own, and only the averaged
+    meta-analysis is shown until LitRev has a table summarising every
+    analysis in one (D2). A section LitRev adds later appears in neither
+    document until it is named here or in supplementary.md.j2.
 -#}
-{% set moved_out = ['synthesis'] %}
-{% for name in default_sections if name not in moved_out %}
+{% for name in ['abstract', 'introduction', 'methods', 'prisma', 'agreement'] %}
 {{ section(name) }}
-{% if name == 'frequencies' %}
+{% endfor %}
+
+## Characteristics of included studies
 
 {{ chart('bar', x='modality', caption='Included studies by input modality', label='modality') }}
 
 {{ chart('bar', x='datasets', min_count=3, horizontal=True, caption='Datasets used by three or more included studies', label='datasets') }}
-{% elif name == 'results' %}
 
 {{ chart('box', source='results', x='trait', y='score', where={'metric': 'accuracy', 'role': 'proposed', 'split': None, 'trait': ['O', 'C', 'E', 'A', 'N']}, caption="Accuracy (%) of each study's proposed system by trait, on its main condition", label='accuracy-by-trait') }}
-{% elif name == 'riskofbias' %}
+
+## Risk of bias in included studies
 
 {{ chart('rob_summary', caption='Risk of bias by domain, as a share of included studies', label='rob-summary') }}
 
 {{ chart('rob_summary', units=True, caption='Risk of bias in the per-dataset domains, as a share of study-dataset pairs', label='rob-summary-units') }}
 
 The judgement for each study is charted in the supplementary document ({{ ref('rob-traffic-light') }}).
-{% endif %}
-{% endfor %}
-{% for name in ['screening_exclusions', 'search_strategy', 'checklist', 'normalisation'] %}
+
+{{ section('metaanalysis', analyses=['r_average']) }}
+{% for name in ['discussion', 'limitations', 'conclusions', 'declarations', 'references'] %}
 {{ section(name) }}
 {% endfor %}

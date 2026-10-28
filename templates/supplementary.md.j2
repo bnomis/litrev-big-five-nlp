@@ -1,13 +1,15 @@
-{#- The default supplementary template with this review's split: synthesis
-    joins it, and the appendices report.md.j2 keeps are left out. See the
-    comment at the top of report.md.j2.
+{#- Everything the manuscript (report.md.j2) leaves out, so the two
+    documents together hold every section. Decided 2026-10-28 in
+    manuscript-review-2026-10-28.md.
 -#}
-{% set kept_in_report = ['screening_exclusions', 'search_strategy', 'checklist', 'normalisation'] %}
-{{ section('synthesis') }}
-{% for name in default_sections if name not in kept_in_report %}
+{% for name in ['corpus', 'characteristics', 'frequencies', 'synthesis', 'results', 'riskofbias'] %}
 {{ section(name) }}
-{% if name == 'studies' %}
+{% if name == 'riskofbias' %}
 
 {{ chart('rob_traffic_light', caption='Risk of bias judgement for each included study and domain', label='rob-traffic-light') }}
 {% endif %}
+{% endfor %}
+{{ section('metaanalysis', analyses=['r_openness', 'r_conscientiousness', 'r_extraversion', 'r_agreeableness', 'r_neuroticism']) }}
+{% for name in ['studies', 'exclusions', 'screening_exclusions', 'search_strategy', 'checklist', 'normalisation'] %}
+{{ section(name) }}
 {% endfor %}
