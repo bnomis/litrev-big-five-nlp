@@ -160,4 +160,12 @@ comments.
   the supplement; the five charts stay in the manuscript under template
   headings.
 - D4 File it: filed in LitRev's `TODO.md`.
+
+**2026-10-29, D2 applied**: LitRev's summary table (report HTML 1.1) landed
+at LitRev `5f04ea7f`. `templates/report.md.j2` now calls
+`section('metaanalysis', summary=True)`, then `r_average` in full with
+`heading=False`. Rehearsed on the clone, then run for real (backup
+`output/backup-pre-summary-20261029-report`); the real outputs equal the
+rehearsal's. The manuscript gains one table with every analysis (average and
+each trait); `supplementary.md` is unchanged. `report.pdf` is 27 pages.
 <!-- doc-counts: accept-end -->
