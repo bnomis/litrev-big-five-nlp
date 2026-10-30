@@ -208,7 +208,9 @@ config: dict[str, typing.Any] = {
     },
     'llm': {
         'provider': 'anthropic',
-        'anthropic': {'model': 'claude-sonnet-5'},
+        # Raised 2026-10-30 for the model_architecture vocabulary:
+        # one normalise call copies its 900 values back, past 16384 (32768 is LitRev's cap).
+        'anthropic': {'model': 'claude-sonnet-5', 'max_tokens': 32768},
     },
     'screen': {
         'criteria': (
@@ -832,6 +834,22 @@ config: dict[str, typing.Any] = {
         # adaptive thinking is billed against the same cap - what cut
         # tabulate's long papers off at 32768.
         'effort': 'low',
+        # Added 2026-10-30: model_architecture is coded into
+        # families (categories), not merged by spelling.
+        'instructions': (
+            'For model_architecture, code each value into the one model family it names: '
+            'transformer_encoder (BERT, RoBERTa, XLNet and other pretrained encoders, fine-tuned or frozen); '
+            'llm (generative large language models such as GPT, Llama, Mistral, prompted or fine-tuned); '
+            'recurrent (LSTM, GRU); convolutional (CNN); graph_neural_network (GCN, GAT); '
+            'other_neural (MLP and other neural networks); svm (SVM, SVR); '
+            'linear_model (logistic, linear, ridge, lasso regression); '
+            'tree_ensemble (decision trees, random forests, boosting); '
+            'other_classical_ml (naive Bayes, KNN, Gaussian processes and other non-neural learners); '
+            'baseline (majority class, ZeroR, random); '
+            'prediction_setup (how the traits are predicted, such as per-trait models, multi-output or multi-task, naming no model); '
+            'other (a technique, component or approach that is not a model). '
+            'Where a value names a hybrid, code it by its main learned model.'
+        ),
         'vocabularies': {
             'datasets': {'fields': ['datasets'], 'columns': ['results.dataset']},
             # Added 2026-10-10 with the `split` column: its values are free
@@ -844,6 +862,15 @@ config: dict[str, typing.Any] = {
             # under several spellings ("Balanced Accuracy" and "Balanced
             # Accuracy (BA)", "Zero-one loss" and "Zero-One Loss").
             'metric_names': {'columns': ['results.metric_name']},
+            # Added 2026-10-30: model_architecture is a free-text list field.
+            'model_architecture': {
+                'fields': ['model_architecture'],
+                'categories': [
+                    'transformer_encoder', 'llm', 'recurrent', 'convolutional', 'graph_neural_network',
+                    'other_neural', 'svm', 'linear_model', 'tree_ensemble', 'other_classical_ml',
+                    'baseline', 'prediction_setup', 'other',
+                ],
+            },
         },
         # Added 2026-10-11: papers print a bounded metric as 0.68 or as
         # 68.0, sometimes both in one paper, and `scale` records which.
@@ -879,6 +906,17 @@ config: dict[str, typing.Any] = {
     # cluster stays 'paper': 'dataset' would treat every Essays result
     # as one sample, which is the stronger independence assumption to
     # drop, and is worth a sensitivity run once the pools exist.
+    # Added 2026-10-30, from the big-five-nlp-explore-20261029 clone, with
+    # model_architecture first so the How often panel opens on model families.
+    'explore': {
+        'table': 'results',
+        'value_column': 'score',
+        'filters': ['metric', 'trait', 'role', 'dataset'],
+        'paper_fields': ['model_architecture', 'modality'],
+        'initial': {'metric': 'accuracy', 'trait': 'C', 'role': 'proposed'},
+        'n_column': 'n',
+        'pool': [{'where': {'metric': 'pearson_r'}, 'measure': 'ZCOR'}],
+    },
     'analyse': {
         'analyses': {
             f'r_{name}': {
