@@ -912,6 +912,7 @@ config: dict[str, typing.Any] = {
         'table': 'results',
         'value_column': 'score',
         'filters': ['metric', 'trait', 'role', 'dataset'],
+        'statistic': ['metric', 'trait'],
         'paper_fields': ['model_architecture', 'modality'],
         'initial': {'metric': 'accuracy', 'trait': 'C', 'role': 'proposed'},
         'n_column': 'n',
