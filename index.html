@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big Five personality detection from natural language</title>
+<style>
+:root { --bg: #fbfbf9; --fg: #1c2421; --muted: #5a6661; --line: #d9dfdb; --accent: #1b6ca8; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #141917; --fg: #e4ebe7; --muted: #9aa8a1; --line: #303a36; --accent: #6fb0e0; }
+}
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 0.5rem; }
+p { margin: 0 0 1rem; }
+.lede { color: var(--muted); }
+.card { display: block; border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; color: inherit; text-decoration: none; }
+.card:hover, .card:focus-visible { border-color: var(--accent); }
+.card strong { color: var(--accent); font-size: 1.1rem; }
+.card span { display: block; color: var(--muted); margin-top: 0.25rem; }
+ul { padding-left: 1.25rem; }
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 2rem; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>Big Five personality detection from natural language</h1>
+<p class="lede">A systematic literature review: how has the Big Five (five-factor) personality model been predicted from human language - written text and spoken language - and with what data, methods and results?</p>
+
+<a class="card" href="explorer.html">
+<strong>Open the explorer &rarr;</strong>
+<span>An interactive page over the results extracted from the included papers. Chart a metric and trait, or what the papers use (dataset, model architecture, modality) over time; switch papers off and on and see the summary and charts change.</span>
+</a>
+
+<p>Using the explorer:</p>
+<ul>
+<li>At the top, choose <em>A result</em> to look at a reported metric for a trait, or <em>What the papers use</em> to count datasets, model architectures or modalities, including over publication years.</li>
+<li>Nothing you do on the page is saved; reload it to start again.</li>
+<li>Each paper links to its source (DOI or publisher). The PDF links do not work on this site: they point at copies kept only with the review's own files.</li>
+<li>The pooled estimates on the page use a simpler model than the review's analysis, so they will not match its reported figures exactly.</li>
+</ul>
+
+<footer>
+Made with LitRev, a systematic literature review tool. The review's configuration is in <a href="https://github.com/bnomis/litrev-big-five-nlp">bnomis/litrev-big-five-nlp</a>. Page generated 2026-11-15.
+</footer>
+</main>
+</body>
+</html>
