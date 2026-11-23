@@ -25,7 +25,7 @@ because a config file is expected to be committed.
 
 ```shell
 export LITREV_LLM_ANTHROPIC_API_KEY=...
-export LITREV_PROJECT=/Users/simonb/src/phd/reviews/big-five-nlp
+export LITREV_PROJECT=$LITREV_REVIEWS_ROOT/big-five-nlp
 ```
 
 With `LITREV_PROJECT` exported, no command below needs `--project`.
