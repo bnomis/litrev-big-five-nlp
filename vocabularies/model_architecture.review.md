@@ -9,7 +9,7 @@ The extracted field `model_architecture` is free text, with 900 distinct
 values across the review's papers on 2026-10-30. To count papers per kind of
 model (the explorer's How often panel), the values were coded into 13 fixed
 families with `normalise`'s `categories` option, on the APFS clone
-`/Users/simonb/src/phd/reviews/big-five-nlp-models-20261030`. The real
+`$LITREV_REVIEWS_ROOT/big-five-nlp-models-20261030`. The real
 review is unchanged.
 
 For each family: approve or flag it, and move any member that is wrong. For

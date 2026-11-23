@@ -72,7 +72,7 @@ Where: report.md - Study selection. Cause: unexplained. Recommendation: **accept
 
 Every count is unchanged; the Provenance column shows paths relative to the review (output/rejected.json) instead of absolute ones. The vocabulary path in Appendix E changed the same way.
 
-- Before: | Duplicate records removed | 92 | available | /Users/simonb/src/phd/reviews/big-five-nlp/output/rejected.json |
+- Before: | Duplicate records removed | 92 | available | $LITREV_REVIEWS_ROOT/big-five-nlp/output/rejected.json |
 - After: | Duplicate records removed | 92 | available | output/rejected.json |
 
 Not a known cause, but it is display only. logs/log.log shows the path form switching between builds (absolute on 2026-10-08 19:21 and 10-10, relative from 10-11 10:22), so it looks like it follows how the run was invoked, not any code change. The previous review recorded the same switch in the other direction (its i7).

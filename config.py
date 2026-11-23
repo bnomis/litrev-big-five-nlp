@@ -123,7 +123,7 @@ The key is never set here - see README: Secrets. Export
 ## Running it
 
     export LITREV_LLM_ANTHROPIC_API_KEY=...
-    export LITREV_PROJECT=/Users/simonb/src/phd/reviews/big-five-nlp
+    export LITREV_PROJECT=$LITREV_REVIEWS_ROOT/big-five-nlp
 
     bin/litrev.sh search
     bin/litrev.sh filter

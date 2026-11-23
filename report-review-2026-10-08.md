@@ -77,7 +77,7 @@ Where: report.md - Study selection.
 
 No explanation found: the counts are unchanged and only the source column changed, from absolute paths to paths relative to the review directory. The LitRev commit that made this change was not identified.
 
-- Before: /Users/simonb/src/phd/reviews/big-five-nlp/output/rejected.json
+- Before: $LITREV_REVIEWS_ROOT/big-five-nlp/output/rejected.json
 - After: output/rejected.json
 
 ## Decisions

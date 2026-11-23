@@ -83,7 +83,7 @@ made.
 
 ### D4. Delete the rehearsal clones?
 
-- **Background**: five APFS clones under `/Users/simonb/src/phd/reviews/`:
+- **Background**: five APFS clones under `$LITREV_REVIEWS_ROOT/`:
   `big-five-nlp-n-sample-20261026`, `big-five-nlp-n-sample-20261027`,
   `big-five-nlp-normalise-rehearsal-20261027`,
   `big-five-nlp-analyse-mean-20261027`, `big-five-nlp-where-exclude-20261027`.
